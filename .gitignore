@@ -7,3 +7,4 @@ Audit-Checklist-microservice/bin/.mvn/wrapper/maven-wrapper.properties
 *.jar
 *.jar
 Audit-Checklist-microservice/bin/.mvn/wrapper/maven-wrapper.jar
+logs/authentication.txt
