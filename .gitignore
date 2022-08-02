@@ -1,0 +1,9 @@
+
+*.jar
+Audit-Checklist-microservice/bin/mvnw
+Audit-Checklist-microservice/bin/src/main/java/com/cts/audit/checklist/AuditChecklistMicroserviceApplication.class
+*.class
+Audit-Checklist-microservice/bin/.mvn/wrapper/maven-wrapper.properties
+*.jar
+*.jar
+Audit-Checklist-microservice/bin/.mvn/wrapper/maven-wrapper.jar
