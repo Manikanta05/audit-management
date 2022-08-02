@@ -1,11 +1,11 @@
 # audit-management
 ## Modules - division
-- Audit checklist Microservice	
-- Audit benchmark Microservice	
-- AuditSeverity Microservice	
-- Authorization Microservice	
+- Audit checklist Microservice	- @Sinchana
+- Audit benchmark Microservice	- @Akansha
+- AuditSeverity Microservice	  - @Manikanta 
+- Authorization Microservice	  - @Manish
 
-##Todo
+## Todo
 - Audit management portal	
 - Angular frontend
 - Unit Testing
