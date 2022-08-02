@@ -1,0 +1,138 @@
+2022-08-02 19:17:28.244  INFO 8076 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on LAPTOP-GA6HJUIM with PID 8076 (D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice\target\classes started by manik in D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice)
+2022-08-02 19:17:28.244  INFO 8076 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
+2022-08-02 19:17:28.580  INFO 8076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-08-02 19:17:28.587  INFO 8076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 1 JPA repository interfaces.
+2022-08-02 19:17:28.680  INFO 8076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-08-02 19:17:28.681  INFO 8076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-02 19:17:28.681  INFO 8076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-08-02 19:17:28.701  INFO 8076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
+2022-08-02 19:17:28.702  INFO 8076 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 457 ms
+2022-08-02 19:17:28.741  INFO 8076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-08-02 19:17:28.743  INFO 8076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2022-08-02 19:17:28.743  INFO 8076 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
+2022-08-02 19:17:28.788  INFO 8076 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-02 19:17:28.792  INFO 8076 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-02 19:17:28.797  INFO 8076 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-02 19:17:28.814  WARN 8076 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-02 19:17:28.817  INFO 8076 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-02 19:17:28.818  INFO 8076 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-02 19:17:28.927  INFO 8076 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
+2022-08-02 19:17:28.949  INFO 8076 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-02 19:17:28.969  INFO 8076 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78364ce2, org.springframework.security.web.context.SecurityContextPersistenceFilter@73555b52, org.springframework.security.web.header.HeaderWriterFilter@6e3828f7, org.springframework.security.web.authentication.logout.LogoutFilter@4401363e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f5d45d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@700da15a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a1fc02d, org.springframework.security.web.session.SessionManagementFilter@44238cf1, org.springframework.security.web.access.ExceptionTranslationFilter@3b02e4da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e864d6]
+2022-08-02 19:17:28.974  INFO 8076 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-02 19:17:29.096  INFO 8076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
+2022-08-02 19:17:29.096  INFO 8076 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-08-02 19:17:29.097  INFO 8076 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-08-02 19:17:29.102  INFO 8076 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-02 19:17:29.120  INFO 8076 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2022-08-02 19:17:29.148  INFO 8076 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2022-08-02 19:17:29.153  INFO 8076 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 0.929 seconds (JVM running for 732.087)
+2022-08-02 19:17:29.165  INFO 8076 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-02 19:20:07.618  INFO 8076 --- [Thread-34] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-02 19:20:07.618  INFO 8076 --- [Thread-34] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-08-02 19:20:07.619  INFO 8076 --- [Thread-34] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-02 19:20:07.830  WARN 8076 --- [Thread-34] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-08-02 19:20:07.831  INFO 8076 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2022-08-02 19:20:07.832  INFO 8076 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2022-08-02 19:20:07.911  INFO 8076 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on LAPTOP-GA6HJUIM with PID 8076 (D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice\target\classes started by manik in D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice)
+2022-08-02 19:20:07.911  INFO 8076 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
+2022-08-02 19:20:08.201  INFO 8076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-08-02 19:20:08.207  INFO 8076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 1 JPA repository interfaces.
+2022-08-02 19:20:08.285  INFO 8076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-08-02 19:20:08.286  INFO 8076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-02 19:20:08.286  INFO 8076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-08-02 19:20:08.306  INFO 8076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
+2022-08-02 19:20:08.306  INFO 8076 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 394 ms
+2022-08-02 19:20:08.338  INFO 8076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2022-08-02 19:20:08.339  INFO 8076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2022-08-02 19:20:08.339  INFO 8076 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
+2022-08-02 19:20:08.381  INFO 8076 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-02 19:20:08.385  INFO 8076 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-02 19:20:08.389  INFO 8076 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-02 19:20:08.411  WARN 8076 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-02 19:20:08.414  INFO 8076 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-02 19:20:08.415  INFO 8076 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-02 19:20:08.462  INFO 8076 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-02 19:20:08.526  INFO 8076 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
+2022-08-02 19:20:08.555  INFO 8076 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3be39082, org.springframework.security.web.context.SecurityContextPersistenceFilter@25f8c884, org.springframework.security.web.header.HeaderWriterFilter@59390bc8, org.springframework.security.web.authentication.logout.LogoutFilter@7b08adf1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75ca6941, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64bc4b7b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@204b9fe8, org.springframework.security.web.session.SessionManagementFilter@5105b251, org.springframework.security.web.access.ExceptionTranslationFilter@91b3f2d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@685e98fa]
+2022-08-02 19:20:08.559  INFO 8076 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-02 19:20:08.654  INFO 8076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
+2022-08-02 19:20:08.655  INFO 8076 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-08-02 19:20:08.656  INFO 8076 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-08-02 19:20:08.661  INFO 8076 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-02 19:20:08.679  INFO 8076 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2022-08-02 19:20:08.702  INFO 8076 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2022-08-02 19:20:08.708  INFO 8076 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 0.815 seconds (JVM running for 891.641)
+2022-08-02 19:20:08.721  INFO 8076 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-02 19:22:21.714  INFO 8076 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-02 19:22:21.714  INFO 8076 --- [Thread-39] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-08-02 19:22:21.715  INFO 8076 --- [Thread-39] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-02 19:22:21.930  WARN 8076 --- [Thread-39] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-08-02 19:22:21.931  INFO 8076 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2022-08-02 19:22:21.931  INFO 8076 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2022-08-02 19:22:22.011  INFO 8076 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on LAPTOP-GA6HJUIM with PID 8076 (D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice\target\classes started by manik in D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice)
+2022-08-02 19:22:22.012  INFO 8076 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
+2022-08-02 19:22:22.326  INFO 8076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-08-02 19:22:22.333  INFO 8076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 1 JPA repository interfaces.
+2022-08-02 19:22:22.426  INFO 8076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-08-02 19:22:22.427  INFO 8076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-02 19:22:22.427  INFO 8076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-08-02 19:22:22.448  INFO 8076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
+2022-08-02 19:22:22.448  INFO 8076 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 434 ms
+2022-08-02 19:22:22.488  INFO 8076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2022-08-02 19:22:22.489  INFO 8076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2022-08-02 19:22:22.489  INFO 8076 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
+2022-08-02 19:22:22.543  INFO 8076 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-02 19:22:22.548  INFO 8076 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-02 19:22:22.553  INFO 8076 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-02 19:22:22.574  INFO 8076 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-02 19:22:22.575  WARN 8076 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-02 19:22:22.575  INFO 8076 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-02 19:22:22.594  INFO 8076 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-02 19:22:22.698  INFO 8076 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
+2022-08-02 19:22:22.729  INFO 8076 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40f33262, org.springframework.security.web.context.SecurityContextPersistenceFilter@2cc85e67, org.springframework.security.web.header.HeaderWriterFilter@39f84dd7, org.springframework.security.web.authentication.logout.LogoutFilter@7c1bc548, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@776316a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c8e6b6f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c95f9aa, org.springframework.security.web.session.SessionManagementFilter@4bb757ed, org.springframework.security.web.access.ExceptionTranslationFilter@221f3df2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c2997de]
+2022-08-02 19:22:22.734  INFO 8076 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-02 19:22:22.844  INFO 8076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
+2022-08-02 19:22:22.845  INFO 8076 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-08-02 19:22:22.845  INFO 8076 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-08-02 19:22:22.850  INFO 8076 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-02 19:22:22.865  INFO 8076 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2022-08-02 19:22:22.891  INFO 8076 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2022-08-02 19:22:22.897  INFO 8076 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 0.914 seconds (JVM running for 1025.83)
+2022-08-02 19:22:22.909  INFO 8076 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-02 19:24:20.721  INFO 8076 --- [Thread-44] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-02 19:24:20.721  INFO 8076 --- [Thread-44] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-08-02 19:24:20.722  INFO 8076 --- [Thread-44] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-02 19:24:20.937  WARN 8076 --- [Thread-44] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-08-02 19:24:20.938  INFO 8076 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2022-08-02 19:24:20.938  INFO 8076 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2022-08-02 19:24:21.001  INFO 8076 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on LAPTOP-GA6HJUIM with PID 8076 (D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice\target\classes started by manik in D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice)
+2022-08-02 19:24:21.001  INFO 8076 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
+2022-08-02 19:24:21.276  INFO 8076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-08-02 19:24:21.283  INFO 8076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 1 JPA repository interfaces.
+2022-08-02 19:24:21.372  INFO 8076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-08-02 19:24:21.372  INFO 8076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-02 19:24:21.372  INFO 8076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-08-02 19:24:21.395  INFO 8076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
+2022-08-02 19:24:21.395  INFO 8076 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 392 ms
+2022-08-02 19:24:21.426  INFO 8076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2022-08-02 19:24:21.427  INFO 8076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2022-08-02 19:24:21.427  INFO 8076 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
+2022-08-02 19:24:21.474  INFO 8076 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-02 19:24:21.478  INFO 8076 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-02 19:24:21.482  INFO 8076 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-02 19:24:21.501  WARN 8076 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-02 19:24:21.503  INFO 8076 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-02 19:24:21.504  INFO 8076 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-02 19:24:21.535  INFO 8076 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-02 19:24:21.614  INFO 8076 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
+2022-08-02 19:24:21.643  INFO 8076 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20c206a, org.springframework.security.web.context.SecurityContextPersistenceFilter@71eac375, org.springframework.security.web.header.HeaderWriterFilter@770ec9a2, org.springframework.security.web.authentication.logout.LogoutFilter@1318daa0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e218025, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5fe3119a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41476af7, org.springframework.security.web.session.SessionManagementFilter@6d50d2cb, org.springframework.security.web.access.ExceptionTranslationFilter@7baa89c4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c271c2a]
+2022-08-02 19:24:21.647  INFO 8076 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-02 19:24:21.741  INFO 8076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
+2022-08-02 19:24:21.741  INFO 8076 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-08-02 19:24:21.741  INFO 8076 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-08-02 19:24:21.746  INFO 8076 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-02 19:24:21.761  INFO 8076 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2022-08-02 19:24:21.783  INFO 8076 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2022-08-02 19:24:21.790  INFO 8076 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 0.806 seconds (JVM running for 1144.722)
+2022-08-02 19:24:21.801  INFO 8076 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
