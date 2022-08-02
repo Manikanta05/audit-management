@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuditType {
+public class AuditBenchmark {
 	private String auditType;
+	private Integer noAnswers;
 }
-
