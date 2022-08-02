@@ -8,7 +8,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cts.severity</groupId>
-	<artifactId>Benchmark</artifactId>
+	<artifactId>Severity</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Audit-Severity-microservice</name>
 	<description>Audit Severity microservice</description>
