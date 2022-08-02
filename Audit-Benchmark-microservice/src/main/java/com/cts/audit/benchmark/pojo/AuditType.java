@@ -1,19 +1,15 @@
-package com.cts.audit.pojo;
+package com.cts.audit.benchmark.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/*
- * This POJO class stores Authentication response
- */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthResponse {
-	
-	private String userId;
-	private boolean isValid;
+public class AuditType {
+	private String auditType;
 }
+
