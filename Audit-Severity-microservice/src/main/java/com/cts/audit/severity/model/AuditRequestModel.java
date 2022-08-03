@@ -21,50 +21,44 @@ public class AuditRequestModel {
 	@Id
 	@Column(name = "RequestId")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int requestId;
+	private int requestid;
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "AuditDetail", referencedColumnName = "AuditId")
-	private AuditDetailModel auditDetail;
+	private AuditDetailModel auditdetail;
 	@Column(name = "ProjectName")
-	private String projectName;
+	private String projectname;
 	@Column(name = "ManagerName")
-	private String managerName;
+	private String managername;
 	@Column(name = "OwnerName")
-	private String ownerName;
-
-	public AuditDetailModel getAuditDetail() {
-		return auditDetail;
+	private String ownername;
+	public int getRequestid() {
+		return requestid;
+	}
+	
+	public AuditDetailModel getAuditdetail() {
+		return auditdetail;
+	}
+	public void setAuditdetail(AuditDetailModel auditdetail) {
+		this.auditdetail = auditdetail;
+	}
+	public String getProjectname() {
+		return projectname;
+	}
+	public void setProjectname(String projectname) {
+		this.projectname = projectname;
+	}
+	public String getManagername() {
+		return managername;
+	}
+	public void setManagername(String managername) {
+		this.managername = managername;
+	}
+	public String getOwnername() {
+		return ownername;
+	}
+	public void setOwnername(String ownername) {
+		this.ownername = ownername;
 	}
 
-	public void setAuditDetail(AuditDetailModel auditDetail) {
-		this.auditDetail = auditDetail;
-	}
-
-	public String getProjectName() {
-		return projectName;
-	}
-
-	public void setProjectName(String projectName) {
-		this.projectName = projectName;
-	}
-
-	public String getManagerName() {
-		return managerName;
-	}
-
-	public void setManagerName(String managerName) {
-		this.managerName = managerName;
-	}
-
-	public String getOwnerName() {
-		return ownerName;
-	}
-
-	public void setOwnerName(String ownerName) {
-		this.ownerName = ownerName;
-	}
-
-	public int getRequestId() {
-		return requestId;
-	}
+	
 }

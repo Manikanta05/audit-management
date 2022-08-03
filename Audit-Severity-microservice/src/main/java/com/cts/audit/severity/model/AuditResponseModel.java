@@ -16,36 +16,28 @@ public class AuditResponseModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ResponseId")
-	private int responseId;
+	private int responseid;
 	@Column(name = "ExecutionStatus")
-	private String executionStatus;
+	private String executionstatus;
 	@Column(name = "ActionDuration")
-	private String actionDuration;
-
-	public String getExecutionStatus() {
-		return executionStatus;
+	private String actionduration;
+	
+	public void setResponseid(int responseid) {
+		this.responseid = responseid;
+	}
+	public String getExecutionstatus() {
+		return executionstatus;
+	}
+	public void setExecutionstatus(String executionstatus) {
+		this.executionstatus = executionstatus;
+	}
+	public String getActionduration() {
+		return actionduration;
+	}
+	public void setActionduration(String actionduration) {
+		this.actionduration = actionduration;
 	}
 
-	public void setExecutionStatus(String executionStatus) {
-		this.executionStatus = executionStatus;
-	}
-
-	public String getActionDuration() {
-		return actionDuration;
-	}
-
-	public void setActionDuration(String actionDuration) {
-		this.actionDuration = actionDuration;
-	}
-
-	public int getResponseId() {
-		return responseId;
-	}
-
-	public AuditResponseModel(String executionStatus, String actionDuration) {
-		super();
-		this.executionStatus = executionStatus;
-		this.actionDuration = actionDuration;
-	}
+	
 
 }

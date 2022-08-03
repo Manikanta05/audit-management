@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -24,38 +23,33 @@ public class AuditDetailModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "AuditId")
-	private int auditId;
+	private int auditid;
 	@Column(name = "AuditType")
-	private String auditType;
+	private String audittype;
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "AuditDate")
-	private Date auditDate;
-	@OneToOne(mappedBy = "auditdetail")
-	private AuditRequestModel auditrequest;
-
+	private Date auditdate;
+//	@OneToOne(mappedBy = "auditdetail")
+//	private AuditRequestModel auditrequest;
+	public int getAuditid() {
+		return auditid;
+	}
+	
+	public String getAudittype() {
+		return audittype;
+	}
+	public void setAudittype(String audittype) {
+		this.audittype = audittype;
+	}
+	public Date getAuditdate() {
+		return auditdate;
+	}
 	@PrePersist
-	protected void onCreate() {
-		auditDate = new Date();
+	public void setAuditdate() {
+		this.auditdate = new Date();
 	}
 
-	public int getAuditId() {
-		return auditId;
-	}
-
-	public String getAuditType() {
-		return auditType;
-	}
-
-	public void setAuditType(String auditType) {
-		this.auditType = auditType;
-	}
-
-	public Date getAuditDate() {
-		return auditDate;
-	}
-
-	public void setAuditDate(Date auditDate) {
-		this.auditDate = auditDate;
-	}
+	
+	
 
 }
