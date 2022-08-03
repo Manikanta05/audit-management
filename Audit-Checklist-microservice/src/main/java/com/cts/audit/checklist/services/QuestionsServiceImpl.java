@@ -20,7 +20,7 @@ public class QuestionsServiceImpl implements QuestionsService {
 	@ApiModelProperty(notes = "This function loads question from database based on audit type ")
 	public List<QuestionEntity> getQuestions(String auditType)  {
 		
-		return repo.findByAuditType(auditType);
+		return repo.findByAudittype(auditType);
 	}
 
 	

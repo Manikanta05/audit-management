@@ -28,7 +28,7 @@ public class QuestionEntity {
 
 	@ApiModelProperty(notes = "Variable questionId acts as an id for questions") 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer questionid;
 	
 	@ApiModelProperty(notes = "Variable auditType stores the type of audit")
@@ -38,6 +38,11 @@ public class QuestionEntity {
 	@ApiModelProperty(notes="Variable questions stores a questions based on audit type")
 	@Column
 	private String question;
+
+	@Override
+	public String toString() {
+		return "QuestionEntity [questionid=" + questionid + ", audittype=" + audittype + ", question=" + question + "]";
+	}
 	
 	/*@ApiModelProperty(notes="Variable responses stores the user response of the question")
 	@Column

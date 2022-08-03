@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS AuditQuestion;
-CREATE TABLE AuditQuestion(questionid INTEGER PRIMARY KEY,audittype VARCHAR(10), question VARCHAR(70));
+--DROP TABLE IF EXISTS AuditQuestion;
+--CREATE TABLE AuditQuestion(questionid INTEGER PRIMARY KEY,audittype VARCHAR(10), question VARCHAR(70));
 Insert into AuditQuestion(audittype,question) Values ('Internal','Have all Change requests followed SDLC before PROD move?');
 Insert into AuditQuestion(audittype,question) Values ('Internal','Have all Change requests been approved by the application owner?');
 Insert into AuditQuestion(audittype,question) Values ('Internal','Are all artifacts like CR document, Unit test cases available?');
