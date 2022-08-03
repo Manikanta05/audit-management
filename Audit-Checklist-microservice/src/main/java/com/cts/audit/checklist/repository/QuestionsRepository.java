@@ -1,8 +1,9 @@
-package com.cts.audit.checklist.repo;
+package com.cts.audit.checklist.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
 
 import com.cts.audit.checklist.model.QuestionEntity;
 
