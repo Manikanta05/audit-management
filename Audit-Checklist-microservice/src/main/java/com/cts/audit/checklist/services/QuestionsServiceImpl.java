@@ -18,17 +18,11 @@ public class QuestionsServiceImpl implements QuestionsService {
 	private QuestionsRepository repo;
 	@Override
 	@ApiModelProperty(notes = "This function loads question from database based on audit type ")
-	public List<QuestionEntity> getQuestions(String auditType) throws IndexOutOfBoundsException {
-		if(repo.findByAuditType(auditType).isEmpty()) {
-			throw new IndexOutOfBoundsException();
-		}
+	public List<QuestionEntity> getQuestions(String auditType)  {
+		
 		return repo.findByAuditType(auditType);
 	}
 
-	@Override
-	@ApiModelProperty(notes = "This function loads saves user's response to the database")
-	public List<QuestionEntity> saveResponses(List<QuestionEntity> responses) {
-		return repo.saveAll(responses);
-	}
+	
 
 }

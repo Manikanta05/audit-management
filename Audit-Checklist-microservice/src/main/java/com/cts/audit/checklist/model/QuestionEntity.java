@@ -22,7 +22,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="AuditQuestions")
+@Table(name="auditquestion")
 @ApiModel(value="This is a question entity model")
 public class QuestionEntity {
 
@@ -35,12 +35,12 @@ public class QuestionEntity {
 	@Column
 	private String audittype;
 	
-	@ApiModelProperty(notes="Variable questions stores a list of questions based on audit type")
+	@ApiModelProperty(notes="Variable questions stores a questions based on audit type")
 	@Column
-	private String questions;
+	private String question;
 	
-	@ApiModelProperty(notes="Variable responses stores the user response of the question")
+	/*@ApiModelProperty(notes="Variable responses stores the user response of the question")
 	@Column
-	private String responses;
-	
+	private String response;
+	*/
 }

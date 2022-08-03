@@ -8,6 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.cts.audit.checklist.model.QuestionEntity;
 
 public interface QuestionsRepository extends JpaRepository<QuestionEntity, Integer> {
-	List <QuestionEntity> findByAuditType(String i);
+	List <QuestionEntity> findByAuditType(String audittype);
 
 }

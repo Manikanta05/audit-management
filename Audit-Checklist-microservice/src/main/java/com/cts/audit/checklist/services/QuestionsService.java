@@ -6,6 +6,6 @@ import com.cts.audit.checklist.model.QuestionEntity;
 
 public interface QuestionsService {
 
-	List<QuestionEntity> getQuestions(String auditType)throws IndexOutOfBoundsException;
-	List<QuestionEntity> saveResponses(List<QuestionEntity> responses);
+	List<QuestionEntity> getQuestions(String auditType);
+	
 }

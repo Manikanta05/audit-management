@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS AuditQuestion;
+CREATE TABLE AuditQuestion(questionid INTEGER PRIMARY KEY,audittype VARCHAR(10), question VARCHAR(70));
+Insert into AuditQuestion(audittype,question) Values ('Internal','Have all Change requests followed SDLC before PROD move?');
+Insert into AuditQuestion(audittype,question) Values ('Internal','Have all Change requests been approved by the application owner?');
+Insert into AuditQuestion(audittype,question) Values ('Internal','Are all artifacts like CR document, Unit test cases available?');
+Insert into AuditQuestion(audittype,question) Values ('Internal','Is the SIT and UAT sign-off available?');
+Insert into AuditQuestion(audittype,question) Values ('Internal','Is data deletion from the system done with application owner approval?');
+Insert into AuditQuestion(audittype,question) Values ('SOX','Have all Change requests followed SDLC before PROD move?');
+Insert into AuditQuestion(audittype,question) Values ('SOX','Have all Change requests been approved by the application owner?');
+Insert into AuditQuestion(audittype,question) Values ('SOX','For a major change, was there a database backup taken before and after PROD move?');
+Insert into AuditQuestion(audittype,question) Values ('SOX','Has the application owner approval obtained while adding a user to the system?');
+Insert into AuditQuestion(audittype,question) Values ('SOX','Is data deletion from the system done with application owner approval?');
