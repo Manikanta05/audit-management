@@ -21,23 +21,25 @@ public class AuditResponseModel {
 	private String executionstatus;
 	@Column(name = "ActionDuration")
 	private String actionduration;
-	
+
 	public void setResponseid(int responseid) {
 		this.responseid = responseid;
 	}
+
 	public String getExecutionstatus() {
 		return executionstatus;
 	}
+
 	public void setExecutionstatus(String executionstatus) {
 		this.executionstatus = executionstatus;
 	}
+
 	public String getActionduration() {
 		return actionduration;
 	}
+
 	public void setActionduration(String actionduration) {
 		this.actionduration = actionduration;
 	}
-
-	
 
 }

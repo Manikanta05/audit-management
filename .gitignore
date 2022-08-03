@@ -10,3 +10,4 @@ Audit-Checklist-microservice/bin/.mvn/wrapper/maven-wrapper.jar
 logs/authentication.txt
 logs/checklist.txt
 logs/severity.txt
+logs/benchmark.txt

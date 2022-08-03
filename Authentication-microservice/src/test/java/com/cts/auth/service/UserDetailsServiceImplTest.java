@@ -1,7 +1,9 @@
 package com.cts.auth.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -22,8 +24,10 @@ public class UserDetailsServiceImplTest {
 	@InjectMocks
 	UserDetailsServiceImpl userDetailsService;
 	
+	@Test
 	public void loadUserByUsernameTest() {
 		MyUser user = new MyUser(1,"manish","manish123");
+		when(repo.findByUserName("manish")).thenReturn(user);
 		UserDetails loadUserByUsername = userDetailsService.loadUserByUsername("manish");
 		assertEquals(user.getUserName(), loadUserByUsername.getUsername());
 	}
