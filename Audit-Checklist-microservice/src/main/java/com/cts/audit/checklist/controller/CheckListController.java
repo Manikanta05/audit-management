@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cts.audit.checklist.exceptions.TokenExpiredException;
+import com.cts.audit.checklist.feign.AuthenticationFeign;
 import com.cts.audit.checklist.model.QuestionEntity;
 import com.cts.audit.checklist.services.QuestionsServiceImpl;
 
@@ -18,6 +20,8 @@ public class CheckListController {
 
 	@Autowired
 	private QuestionsServiceImpl questionServiceImpl;
+	@Autowired
+	private AuthenticationFeign authFeign;
 	
 	@GetMapping("/health-check")
 	public ResponseEntity<String> healthCheck() {
@@ -26,7 +30,11 @@ public class CheckListController {
 	
 	@GetMapping("/AuditCheckListQuestions/{audittype}")
 	public ResponseEntity<List<QuestionEntity>> getQuestions(@RequestHeader(name = "Authorization") String token,@PathVariable String audittype){
+		ResponseEntity<Boolean> validate = authFeign.validate(token);
+		if(validate.getBody())
 		return new ResponseEntity<List<QuestionEntity>>( questionServiceImpl.getQuestions(audittype),HttpStatus.OK);
+		else
+			throw new TokenExpiredException("Token is expired or Invalid token, please login again!");
 		
 	}
 }
