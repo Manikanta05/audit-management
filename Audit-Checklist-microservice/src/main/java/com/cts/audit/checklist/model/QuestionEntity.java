@@ -1,5 +1,6 @@
 package com.cts.audit.checklist.model;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -20,22 +23,23 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name="AuditQuestions")
+@ApiModel(value="This is a question entity model")
 public class QuestionEntity {
 
-	//Variable questionId acts as an id for questions
+	@ApiModelProperty(notes = "Variable questionId acts as an id for questions") 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer questionId;
+	private Integer questionid;
 	
-	//Variable auditType stores the type of audit 
+	@ApiModelProperty(notes = "Variable auditType stores the type of audit")
 	@Column
-	private String auditType;
+	private String audittype;
 	
-	//Variable questions stores a list of questions based on auditType
+	@ApiModelProperty(notes="Variable questions stores a list of questions based on audit type")
 	@Column
 	private String questions;
 	
-	//Variable responses stores the user response of the question
+	@ApiModelProperty(notes="Variable responses stores the user response of the question")
 	@Column
 	private String responses;
 	
