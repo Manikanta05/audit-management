@@ -46,4 +46,13 @@ public class GlobalExceptionHandler {
 
 		return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
 	}
+	
+	
+	@ExceptionHandler(TokenNotValidException.class)
+	public ResponseEntity<CustomErrorResponse> handleTokenExpiredEception(TokenNotValidException tokenNotValidException){
+		CustomErrorResponse response = new CustomErrorResponse();
+		response.setDateTime(LocalDateTime.now());
+		response.setMessage(tokenNotValidException.getMessage());
+		return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
+	}
 }
