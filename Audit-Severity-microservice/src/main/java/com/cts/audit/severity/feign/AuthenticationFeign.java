@@ -9,5 +9,5 @@ public interface AuthenticationFeign {
 
 	
 	@GetMapping("/validate")
-	public ResponseEntity<Boolean> validate(@RequestHeader(name = "Authorization") String token1);
+	public Boolean validate(@RequestHeader(name = "Authorization") String token1);
 }

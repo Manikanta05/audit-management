@@ -29,9 +29,12 @@ public class SeverityController {
 	public AuditResponseModel projectExecution(@RequestHeader(name = "Authorization") String token,
 			@RequestBody AuditRequestModel request) {
 		log.info("before validation-----------------------------------");
-		ResponseEntity<Boolean> validate = authFeign.validate(token);
+		log.info(token);
+		log.info(request.toString());
+		log.info(request.getAuditdetail().toString());
+		Boolean validate = authFeign.validate(token);
 		log.info("after validation------------------------------------");
-		if (validate.getBody()) {
+		if (validate) {
 			log.info("validation successful-----------------------");
 			return severityService.checkSeverity(request);
 		} else

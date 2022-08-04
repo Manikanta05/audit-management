@@ -18,12 +18,18 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "auditrequest")
 public class AuditRequestModel {
+	@Override
+	public String toString() {
+		return "AuditRequestModel [requestid=" + requestid + ", auditdetail=" + auditdetail + ", projectname="
+				+ projectname + ", managername=" + managername + ", ownername=" + ownername + "]";
+	}
+
 	@Id
 	@Column(name = "RequestId")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int requestid;
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "AuditDetail", referencedColumnName = "AuditId")
+//	@JoinColumn(name = "AuditDetail", referencedColumnName = "AuditId")
 	private AuditDetailModel auditdetail;
 	@Column(name = "ProjectName")
 	private String projectname;

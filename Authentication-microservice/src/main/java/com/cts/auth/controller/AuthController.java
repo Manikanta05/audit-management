@@ -52,13 +52,15 @@ public class AuthController {
 	public ResponseEntity<Boolean> validate(@RequestHeader(name = "Authorization") String token1) {
 		String token = token1.substring(7);
 		try {
+			log.info("inside validation................................");
 			UserDetails user = userDetailsService.loadUserByUsername(jwtUtil.extractUsername(token));
+			log.info("after validation................................");
 			
 			if (jwtUtil.validateToken(token, user)) {
 				System.out.println("=================Inside Validate==================");
 				return new ResponseEntity<>(true, HttpStatus.OK);
 			} else {
-				throw new TokenNotValidException("Invalid Token Exception");
+				return new ResponseEntity<>(false, HttpStatus.FORBIDDEN);
 			}
 		} catch (Exception e) {
 			return new ResponseEntity<>(false, HttpStatus.FORBIDDEN);
