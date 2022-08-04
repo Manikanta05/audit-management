@@ -5,11 +5,5 @@ Audit-Checklist-microservice/bin/src/main/java/com/cts/audit/checklist/AuditChec
 *.class
 Audit-Checklist-microservice/bin/.mvn/wrapper/maven-wrapper.properties
 *.jar
-*.jar
 Audit-Checklist-microservice/bin/.mvn/wrapper/maven-wrapper.jar
-logs/authentication.txt
-logs/checklist.txt
-logs/severity.txt
-logs/benchmark.txt
-logs/authentication.txt
-logs/authentication.txt
+logs*
