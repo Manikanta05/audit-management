@@ -30,6 +30,10 @@ public class AuditDetailModel {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "AuditDate")
 	private Date auditdate;
+	@Column(name="CountOfNo")
+	private int countofno;
+	
+	
 	@OneToOne(mappedBy = "auditdetail")
 	private AuditRequestModel auditrequest;
 
@@ -52,6 +56,14 @@ public class AuditDetailModel {
 	@PrePersist
 	public void setAuditdate() {
 		this.auditdate = new Date();
+	}
+
+	public int getCountofno() {
+		return countofno;
+	}
+
+	public void setCountofno(int countofno) {
+		this.countofno = countofno;
 	}
 
 }
