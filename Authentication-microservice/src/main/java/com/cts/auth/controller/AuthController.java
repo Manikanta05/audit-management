@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cts.auth.exceptions.TokenNotValidException;
 import com.cts.auth.exceptions.UserNameNumericException;
 import com.cts.auth.exceptions.UserNotFoundException;
 import com.cts.auth.model.UserCredentials;
@@ -55,7 +56,7 @@ public class AuthController {
 				System.out.println("=================Inside Validate==================");
 				return new ResponseEntity<>(true, HttpStatus.OK);
 			} else {
-				return new ResponseEntity<>(false, HttpStatus.FORBIDDEN);
+				throw new TokenNotValidException("Invalid Token Exception");
 			}
 		} catch (Exception e) {
 			return new ResponseEntity<>(false, HttpStatus.FORBIDDEN);
