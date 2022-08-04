@@ -1,11 +1,11 @@
 package com.cts.audit.benchmark.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,6 +16,7 @@ import com.cts.audit.benchmark.service.BenchmarkService;
  * The end point "/AuditBenchmark" returns List of AuditBenchmark
  */
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class BenchmarkController {
 	@Autowired
 	private BenchmarkService auditService;
