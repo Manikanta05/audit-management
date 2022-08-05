@@ -1,813 +1,190 @@
-2022-08-03 11:47:11.878  INFO 7188 --- [main] thenticationMicroserviceApplicationTests : Starting AuthenticationMicroserviceApplicationTests on DESKTOP-M1R7M81 with PID 7188 (started by USER in F:\Audit Project\audit-management\Authentication-microservice)
-2022-08-03 11:47:11.958  INFO 7188 --- [main] thenticationMicroserviceApplicationTests : No active profile set, falling back to default profiles: default
-2022-08-03 11:47:18.890  INFO 7188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 11:47:19.241  INFO 7188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 304ms. Found 1 JPA repository interfaces.
-2022-08-03 11:47:25.806  INFO 7188 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 11:47:25.896  INFO 7188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 11:47:26.785  INFO 7188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 11:47:27.194  INFO 7188 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 11:47:28.776  INFO 7188 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 11:47:28.989  WARN 7188 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 11:47:31.098  INFO 7188 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 11:47:33.420  INFO 7188 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 11:47:36.008  INFO 7188 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 11:47:38.431  INFO 7188 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 11:47:38.469  INFO 7188 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 11:47:39.208  INFO 7188 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@682e445e, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ca3648, org.springframework.security.web.header.HeaderWriterFilter@4faf1f4, org.springframework.security.web.authentication.logout.LogoutFilter@71166348, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39f0c343, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11eec06b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79e10fb4, org.springframework.security.web.session.SessionManagementFilter@56cfe6be, org.springframework.security.web.access.ExceptionTranslationFilter@2f4d32bf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f15f52a]
-2022-08-03 11:47:39.546  INFO 7188 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 11:47:43.615  INFO 7188 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 11:47:43.729  INFO 7188 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 11:47:43.964  INFO 7188 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 11:47:44.874  INFO 7188 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 11:47:46.576  INFO 7188 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 11:47:46.623  INFO 7188 --- [main] thenticationMicroserviceApplicationTests : Started AuthenticationMicroserviceApplicationTests in 36.622 seconds (JVM running for 44.316)
-2022-08-03 11:47:48.284  INFO 7188 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 11:47:48.290  INFO 7188 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 11:47:48.331  INFO 7188 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 11:47:48.333  INFO 7188 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 11:47:48.350  INFO 7188 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 11:48:39.006  INFO 12060 --- [main] c.c.a.s.UserDetailsServiceImplTest       : Starting UserDetailsServiceImplTest on DESKTOP-M1R7M81 with PID 12060 (started by USER in F:\Audit Project\audit-management\Authentication-microservice)
-2022-08-03 11:48:39.012  INFO 12060 --- [main] c.c.a.s.UserDetailsServiceImplTest       : No active profile set, falling back to default profiles: default
-2022-08-03 11:48:45.226  INFO 12060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 11:48:45.626  INFO 12060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 357ms. Found 1 JPA repository interfaces.
-2022-08-03 11:48:48.650  INFO 12060 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 11:48:48.721  INFO 12060 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 11:48:49.579  INFO 12060 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 11:48:50.009  INFO 12060 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 11:48:50.325  WARN 12060 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 11:48:50.375  INFO 12060 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 11:48:51.278  INFO 12060 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 11:48:53.112  INFO 12060 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 11:48:55.654  INFO 12060 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 11:48:57.622  INFO 12060 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 11:48:57.674  INFO 12060 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 11:48:58.772  INFO 12060 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@374ccb9, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b063470, org.springframework.security.web.header.HeaderWriterFilter@70c29356, org.springframework.security.web.authentication.logout.LogoutFilter@13192275, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@527937d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e191fda, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66713605, org.springframework.security.web.session.SessionManagementFilter@336f49a1, org.springframework.security.web.access.ExceptionTranslationFilter@4d4c1ba9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25a5c8e]
-2022-08-03 11:48:59.092  INFO 12060 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 11:49:02.553  INFO 12060 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 11:49:02.653  INFO 12060 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 11:49:02.867  INFO 12060 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 11:49:03.508  INFO 12060 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 11:49:05.011  INFO 12060 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 11:49:05.058  INFO 12060 --- [main] c.c.a.s.UserDetailsServiceImplTest       : Started UserDetailsServiceImplTest in 27.357 seconds (JVM running for 33.01)
-2022-08-03 11:49:07.193  INFO 12060 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.cts.auth.AuthenticationMicroserviceApplicationTests], using SpringBootContextLoader
-2022-08-03 11:49:07.202  INFO 12060 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.cts.auth.AuthenticationMicroserviceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-08-03 11:49:07.203  INFO 12060 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.cts.auth.AuthenticationMicroserviceApplicationTests]: AuthenticationMicroserviceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-08-03 11:49:07.225  INFO 12060 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.cts.auth.AuthenticationMicroserviceApplication for test class com.cts.auth.AuthenticationMicroserviceApplicationTests
-2022-08-03 11:49:07.234  INFO 12060 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
-2022-08-03 11:49:07.240  INFO 12060 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4e61a863, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@35f01759, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2fea9a7b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2aa07d80, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69c1ea07, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5cbe72b9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@27fc0217, org.springframework.test.context.event.EventPublishingTestExecutionListener@e993715, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@686e7513, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@47eae91d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@c1a74d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@472719df, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5cfa2ac5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4cc89246, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@413eaf5d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3e28af44]
-2022-08-03 11:49:07.898  INFO 12060 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 11:49:07.900  INFO 12060 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 11:49:07.945  INFO 12060 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 11:49:07.947  INFO 12060 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 11:49:08.040  INFO 12060 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 11:58:20.387  INFO 692 --- [main] c.c.a.s.UserDetailsServiceImplTest       : Starting UserDetailsServiceImplTest on DESKTOP-M1R7M81 with PID 692 (started by USER in F:\Audit Project\audit-management\Authentication-microservice)
-2022-08-03 11:58:20.404  INFO 692 --- [main] c.c.a.s.UserDetailsServiceImplTest       : No active profile set, falling back to default profiles: default
-2022-08-03 11:58:27.273  INFO 692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 11:58:27.626  INFO 692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 307ms. Found 1 JPA repository interfaces.
-2022-08-03 11:58:31.233  INFO 692 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 11:58:31.349  INFO 692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 11:58:32.311  INFO 692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 11:58:32.799  INFO 692 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 11:58:33.242  INFO 692 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 11:58:33.384  WARN 692 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 11:58:34.256  INFO 692 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 11:58:36.163  INFO 692 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 11:58:39.209  INFO 692 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 11:58:41.298  INFO 692 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 11:58:41.384  INFO 692 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 11:58:43.419  INFO 692 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@307cf964, org.springframework.security.web.context.SecurityContextPersistenceFilter@4fb57fb3, org.springframework.security.web.header.HeaderWriterFilter@755a7218, org.springframework.security.web.authentication.logout.LogoutFilter@6b42e36d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@226d5af0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1de13f34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@374ccb9, org.springframework.security.web.session.SessionManagementFilter@6238d5e0, org.springframework.security.web.access.ExceptionTranslationFilter@5627cb29, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b06d46d]
-2022-08-03 11:58:43.789  INFO 692 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 11:58:49.636  INFO 692 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 11:58:49.762  INFO 692 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 11:58:50.136  INFO 692 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 11:58:50.958  INFO 692 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 11:58:53.129  INFO 692 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 11:58:53.191  INFO 692 --- [main] c.c.a.s.UserDetailsServiceImplTest       : Started UserDetailsServiceImplTest in 34.152 seconds (JVM running for 40.09)
-2022-08-03 11:58:55.443  INFO 692 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.cts.auth.AuthenticationMicroserviceApplicationTests], using SpringBootContextLoader
-2022-08-03 11:58:55.449  INFO 692 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.cts.auth.AuthenticationMicroserviceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-08-03 11:58:55.451  INFO 692 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.cts.auth.AuthenticationMicroserviceApplicationTests]: AuthenticationMicroserviceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-08-03 11:58:55.531  INFO 692 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.cts.auth.AuthenticationMicroserviceApplication for test class com.cts.auth.AuthenticationMicroserviceApplicationTests
-2022-08-03 11:58:55.541  INFO 692 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
-2022-08-03 11:58:55.546  INFO 692 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2474df51, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2864d34d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5fb514c2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3e9b3b3c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3c97f5e9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@32e7b78d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4583b617, org.springframework.test.context.event.EventPublishingTestExecutionListener@22a63740, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@211da640, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@2ec92631, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@76220ef1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@65ad2b42, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@294ebe11, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4e51eda7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2862271a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2419fe6f]
-2022-08-03 11:58:56.032  INFO 692 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 11:58:56.034  INFO 692 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 11:58:56.080  INFO 692 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 11:58:56.093  INFO 692 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 11:58:56.120  INFO 692 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 12:15:22.573  INFO 8272 --- [main] c.c.a.s.UserDetailsServiceImplTest       : Starting UserDetailsServiceImplTest on DESKTOP-M1R7M81 with PID 8272 (started by USER in F:\Audit Project\audit-management\Authentication-microservice)
-2022-08-03 12:15:22.600  INFO 8272 --- [main] c.c.a.s.UserDetailsServiceImplTest       : No active profile set, falling back to default profiles: default
-2022-08-03 12:15:30.657  INFO 8272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 12:15:31.067  INFO 8272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 314ms. Found 1 JPA repository interfaces.
-2022-08-03 12:15:35.028  INFO 8272 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 12:15:35.123  INFO 8272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 12:15:36.017  INFO 8272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 12:15:36.496  INFO 8272 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 12:15:37.278  INFO 8272 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 12:15:37.349  WARN 8272 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 12:15:38.331  INFO 8272 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 12:15:42.130  INFO 8272 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 12:15:44.657  INFO 8272 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 12:15:51.362  INFO 8272 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 12:15:51.409  INFO 8272 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 12:15:52.084  INFO 8272 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4409cae6, org.springframework.security.web.context.SecurityContextPersistenceFilter@58a7dc4, org.springframework.security.web.header.HeaderWriterFilter@2017f6e6, org.springframework.security.web.authentication.logout.LogoutFilter@53ea380b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27f71195, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@226d5af0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14e750c5, org.springframework.security.web.session.SessionManagementFilter@70c29356, org.springframework.security.web.access.ExceptionTranslationFilter@39133244, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13f40d71]
-2022-08-03 12:15:52.416  INFO 8272 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 12:15:56.023  INFO 8272 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 12:15:56.149  INFO 8272 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 12:15:56.358  INFO 8272 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 12:15:56.972  INFO 8272 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 12:15:58.614  INFO 8272 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 12:15:58.662  INFO 8272 --- [main] c.c.a.s.UserDetailsServiceImplTest       : Started UserDetailsServiceImplTest in 37.692 seconds (JVM running for 45.194)
-2022-08-03 12:16:00.946  INFO 8272 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.cts.auth.AuthenticationMicroserviceApplicationTests], using SpringBootContextLoader
-2022-08-03 12:16:00.951  INFO 8272 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.cts.auth.AuthenticationMicroserviceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-08-03 12:16:00.952  INFO 8272 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.cts.auth.AuthenticationMicroserviceApplicationTests]: AuthenticationMicroserviceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-08-03 12:16:01.036  INFO 8272 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.cts.auth.AuthenticationMicroserviceApplication for test class com.cts.auth.AuthenticationMicroserviceApplicationTests
-2022-08-03 12:16:01.052  INFO 8272 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
-2022-08-03 12:16:01.056  INFO 8272 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@26d24d7a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5a78b52b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4bab78ce, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@42ffbab6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7672960e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@69bca406, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@79c1ccf7, org.springframework.test.context.event.EventPublishingTestExecutionListener@4654e373, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@2474df51, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@2864d34d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5fb514c2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3e9b3b3c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3c97f5e9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@32e7b78d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4583b617, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@22a63740]
-2022-08-03 12:16:01.432  INFO 8272 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 12:16:01.433  INFO 8272 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 12:16:01.474  INFO 8272 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 12:16:01.476  INFO 8272 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 12:16:01.493  INFO 8272 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 12:19:20.100  INFO 6860 --- [main] thenticationMicroserviceApplicationTests : Starting AuthenticationMicroserviceApplicationTests on DESKTOP-M1R7M81 with PID 6860 (started by USER in F:\Audit Project\audit-management\Authentication-microservice)
-2022-08-03 12:19:20.163  INFO 6860 --- [main] thenticationMicroserviceApplicationTests : No active profile set, falling back to default profiles: default
-2022-08-03 12:19:27.638  INFO 6860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 12:19:27.937  INFO 6860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 256ms. Found 1 JPA repository interfaces.
-2022-08-03 12:19:33.158  INFO 6860 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 12:19:33.311  INFO 6860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 12:19:34.365  INFO 6860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 12:19:34.938  INFO 6860 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 12:19:35.499  WARN 6860 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 12:19:35.506  INFO 6860 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 12:19:37.111  INFO 6860 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 12:19:39.689  INFO 6860 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 12:19:42.610  INFO 6860 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 12:19:45.741  INFO 6860 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 12:19:45.815  INFO 6860 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 12:19:46.044  INFO 6860 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13516600, org.springframework.security.web.context.SecurityContextPersistenceFilter@42d9e8d2, org.springframework.security.web.header.HeaderWriterFilter@7cf8f45a, org.springframework.security.web.authentication.logout.LogoutFilter@2c47a053, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@582a3b19, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@49754e74, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35d7386b, org.springframework.security.web.session.SessionManagementFilter@35f7969d, org.springframework.security.web.access.ExceptionTranslationFilter@51b87df7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@682618e5]
-2022-08-03 12:19:46.483  INFO 6860 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 12:19:50.394  INFO 6860 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 12:19:50.503  INFO 6860 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 12:19:50.732  INFO 6860 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 12:19:51.975  INFO 6860 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories�
-2022-08-03 12:19:54.154  INFO 6860 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 12:19:54.201  INFO 6860 --- [main] thenticationMicroserviceApplicationTests : Started AuthenticationMicroserviceApplicationTests in 36.185 seconds (JVM running for 43.275)
-2022-08-03 12:19:57.457  INFO 6860 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 12:19:57.462  INFO 6860 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 12:19:57.509  INFO 6860 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 12:19:57.513  INFO 6860 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 12:19:57.527  INFO 6860 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 12:40:16.278  INFO 6004 --- [main] c.c.auth.controller.AuthControllerTest   : Starting AuthControllerTest on DESKTOP-M1R7M81 with PID 6004 (started by USER in F:\Audit Project\audit-management\Authentication-microservice)
-2022-08-03 12:40:16.326  INFO 6004 --- [main] c.c.auth.controller.AuthControllerTest   : No active profile set, falling back to default profiles: default
-2022-08-03 12:40:23.189  INFO 6004 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 12:40:23.486  INFO 6004 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 256ms. Found 1 JPA repository interfaces.
-2022-08-03 12:40:26.695  INFO 6004 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 12:40:26.775  INFO 6004 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 12:40:27.596  INFO 6004 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 12:40:27.971  INFO 6004 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 12:40:28.344  INFO 6004 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 12:40:28.393  WARN 6004 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 12:40:29.268  INFO 6004 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 12:40:31.067  INFO 6004 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 12:40:34.362  INFO 6004 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 12:40:35.945  INFO 6004 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 12:40:36.034  INFO 6004 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 12:40:37.266  INFO 6004 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2484dbb7, org.springframework.security.web.context.SecurityContextPersistenceFilter@62f9c790, org.springframework.security.web.header.HeaderWriterFilter@72c9ebfa, org.springframework.security.web.authentication.logout.LogoutFilter@6f1fa1d0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@93bf0e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5939e24, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@111cba40, org.springframework.security.web.session.SessionManagementFilter@3bbf1c0d, org.springframework.security.web.access.ExceptionTranslationFilter@7a66c35a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55296b50]
-2022-08-03 12:40:37.655  INFO 6004 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 12:40:41.940  INFO 6004 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 12:40:42.052  INFO 6004 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 12:40:42.276  INFO 6004 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 12:40:43.310  INFO 6004 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 12:40:45.018  INFO 6004 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 12:40:45.060  INFO 6004 --- [main] c.c.auth.controller.AuthControllerTest   : Started AuthControllerTest in 30.134 seconds (JVM running for 34.957)
-2022-08-03 12:40:47.525  INFO 6004 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 12:40:47.530  INFO 6004 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 12:40:47.593  INFO 6004 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 12:40:47.595  INFO 6004 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 12:40:47.613  INFO 6004 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 12:42:32.480  INFO 9936 --- [main] c.c.auth.controller.AuthControllerTest   : Starting AuthControllerTest on DESKTOP-M1R7M81 with PID 9936 (started by USER in F:\Audit Project\audit-management\Authentication-microservice)
-2022-08-03 12:42:32.485  INFO 9936 --- [main] c.c.auth.controller.AuthControllerTest   : No active profile set, falling back to default profiles: default
-2022-08-03 12:42:38.519  INFO 9936 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 12:42:38.868  INFO 9936 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 308ms. Found 1 JPA repository interfaces.
-2022-08-03 12:42:42.094  INFO 9936 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 12:42:42.172  INFO 9936 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 12:42:42.979  INFO 9936 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 12:42:43.356  INFO 9936 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 12:42:43.754  INFO 9936 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 12:42:43.838  WARN 9936 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 12:42:45.734  INFO 9936 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 12:42:47.900  INFO 9936 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 12:42:50.632  INFO 9936 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 12:42:52.480  INFO 9936 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 12:42:52.564  INFO 9936 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 12:42:54.031  INFO 9936 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48e41b5d, org.springframework.security.web.context.SecurityContextPersistenceFilter@93bf0e0, org.springframework.security.web.header.HeaderWriterFilter@747f6c5a, org.springframework.security.web.authentication.logout.LogoutFilter@52ba685a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@656842bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2055833f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51e8d066, org.springframework.security.web.session.SessionManagementFilter@216c22ce, org.springframework.security.web.access.ExceptionTranslationFilter@73e4387, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@29c53c4f]
-2022-08-03 12:42:54.680  INFO 9936 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 12:42:59.927  INFO 9936 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 12:43:00.095  INFO 9936 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 12:43:00.381  INFO 9936 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 12:43:01.397  INFO 9936 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 12:43:03.353  INFO 9936 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 12:43:03.410  INFO 9936 --- [main] c.c.auth.controller.AuthControllerTest   : Started AuthControllerTest in 32.222 seconds (JVM running for 36.982)
-2022-08-03 12:43:05.763  INFO 9936 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 12:43:05.765  INFO 9936 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 12:43:05.805  INFO 9936 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 12:43:05.809  INFO 9936 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 12:43:05.825  INFO 9936 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 13:10:38.560  INFO 8824 --- [main] c.c.a.e.UserNotFoundExceptionTest        : Starting UserNotFoundExceptionTest on DESKTOP-M1R7M81 with PID 8824 (started by USER in F:\Audit Project\audit-management\Authentication-microservice)
-2022-08-03 13:10:38.571  INFO 8824 --- [main] c.c.a.e.UserNotFoundExceptionTest        : No active profile set, falling back to default profiles: default
-2022-08-03 13:10:45.641  INFO 8824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 13:10:45.944  INFO 8824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 258ms. Found 1 JPA repository interfaces.
-2022-08-03 13:10:50.149  INFO 8824 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 13:10:50.392  INFO 8824 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 13:10:52.029  INFO 8824 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 13:10:52.647  INFO 8824 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 13:10:53.150  INFO 8824 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 13:10:53.379  WARN 8824 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 13:10:54.359  INFO 8824 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 13:10:56.197  INFO 8824 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 13:11:00.635  INFO 8824 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 13:11:02.435  INFO 8824 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 13:11:02.533  INFO 8824 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 13:11:04.055  INFO 8824 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3cb6e0ee, org.springframework.security.web.context.SecurityContextPersistenceFilter@6812c8cc, org.springframework.security.web.header.HeaderWriterFilter@6b4a4e40, org.springframework.security.web.authentication.logout.LogoutFilter@3dec3f87, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a66c35a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5bb8e6fc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b6141f0, org.springframework.security.web.session.SessionManagementFilter@5b8853, org.springframework.security.web.access.ExceptionTranslationFilter@29bbc391, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6ad6443]
-2022-08-03 13:11:04.466  INFO 8824 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 13:11:09.655  INFO 8824 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 13:11:09.765  INFO 8824 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 13:11:09.970  INFO 8824 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 13:11:10.631  INFO 8824 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 13:11:12.215  INFO 8824 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 13:11:12.259  INFO 8824 --- [main] c.c.a.e.UserNotFoundExceptionTest        : Started UserNotFoundExceptionTest in 35.069 seconds (JVM running for 39.908)
-2022-08-03 13:11:13.847  INFO 8824 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 13:11:13.854  INFO 8824 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 13:11:13.916  INFO 8824 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 13:11:13.919  INFO 8824 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 13:11:13.934  INFO 8824 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 13:21:24.120  INFO 11636 --- [main] c.c.a.s.UserDetailsServiceImplTest       : Starting UserDetailsServiceImplTest on DESKTOP-M1R7M81 with PID 11636 (started by USER in F:\Audit Project\audit-management\Authentication-microservice)
-2022-08-03 13:21:24.125  INFO 11636 --- [main] c.c.a.s.UserDetailsServiceImplTest       : No active profile set, falling back to default profiles: default
-2022-08-03 13:21:29.868  INFO 11636 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 13:21:30.173  INFO 11636 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 266ms. Found 1 JPA repository interfaces.
-2022-08-03 13:21:33.890  INFO 11636 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 13:21:33.962  INFO 11636 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 13:21:34.778  INFO 11636 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 13:21:35.171  INFO 11636 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 13:21:35.558  INFO 11636 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 13:21:35.636  WARN 11636 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 13:21:36.657  INFO 11636 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 13:21:38.885  INFO 11636 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 13:21:41.487  INFO 11636 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 13:21:43.742  INFO 11636 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 13:21:43.786  INFO 11636 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 13:21:44.502  INFO 11636 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@150fc7a7, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c7f9861, org.springframework.security.web.header.HeaderWriterFilter@77324a58, org.springframework.security.web.authentication.logout.LogoutFilter@51f68849, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@154b8cb6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39449465, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55d8c2c4, org.springframework.security.web.session.SessionManagementFilter@37ca3ca8, org.springframework.security.web.access.ExceptionTranslationFilter@b06d46d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@aa1bb14]
-2022-08-03 13:21:44.806  INFO 11636 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 13:21:48.630  INFO 11636 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 13:21:48.734  INFO 11636 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 13:21:48.918  INFO 11636 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 13:21:49.548  INFO 11636 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 13:21:50.987  INFO 11636 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 13:21:51.029  INFO 11636 --- [main] c.c.a.s.UserDetailsServiceImplTest       : Started UserDetailsServiceImplTest in 28.2 seconds (JVM running for 34.085)
-2022-08-03 13:21:53.066  INFO 11636 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.cts.auth.AuthenticationMicroserviceApplicationTests], using SpringBootContextLoader
-2022-08-03 13:21:53.070  INFO 11636 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.cts.auth.AuthenticationMicroserviceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-08-03 13:21:53.071  INFO 11636 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.cts.auth.AuthenticationMicroserviceApplicationTests]: AuthenticationMicroserviceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-08-03 13:21:53.091  INFO 11636 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.cts.auth.AuthenticationMicroserviceApplication for test class com.cts.auth.AuthenticationMicroserviceApplicationTests
-2022-08-03 13:21:53.098  INFO 11636 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
-2022-08-03 13:21:53.102  INFO 11636 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3eb0fd88, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@adc3344, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@484302ee, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4e647f39, org.springframework.test.context.support.DirtiesContextTestExecutionListener@778197c0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c2cdc67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4c28f97e, org.springframework.test.context.event.EventPublishingTestExecutionListener@21d8da75, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5a1c7619, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@20a946d9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2b41b8bb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4cadd4d4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7538cfe6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1f4dd016, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@396f2724, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1b465fa9]
-2022-08-03 13:21:56.472  INFO 11636 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 13:21:56.473  INFO 11636 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 13:21:56.512  INFO 11636 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 13:21:56.514  INFO 11636 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 13:21:56.530  INFO 11636 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 19:17:46.057  INFO 12404 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on DESKTOP-3JMLSMQ with PID 12404 (D:\eclipse-workspace\audit-management\Authentication-microservice\target\classes started by Sinchana in D:\eclipse-workspace\audit-management\Authentication-microservice)
-2022-08-03 19:17:46.102  INFO 12404 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
-2022-08-03 19:17:46.182  INFO 12404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-08-03 19:17:46.182  INFO 12404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-08-03 19:17:48.392  INFO 12404 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 19:17:48.499  INFO 12404 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93ms. Found 1 JPA repository interfaces.
-2022-08-03 19:17:49.636  INFO 12404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-08-03 19:17:49.653  INFO 12404 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-03 19:17:49.654  INFO 12404 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2022-08-03 19:17:49.805  INFO 12404 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
-2022-08-03 19:17:49.806  INFO 12404 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3623 ms
-2022-08-03 19:17:50.449  INFO 12404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 19:17:51.075  INFO 12404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 19:17:51.097  INFO 12404 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
-2022-08-03 19:17:51.594  INFO 12404 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 19:17:51.752  INFO 12404 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 19:17:51.842  WARN 12404 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 19:17:51.879  INFO 12404 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 19:17:52.227  INFO 12404 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 19:17:52.493  INFO 12404 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 19:17:52.680  INFO 12404 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 19:17:53.214  INFO 12404 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e7538c, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f028a5, org.springframework.security.web.header.HeaderWriterFilter@c7b5ea, org.springframework.security.web.authentication.logout.LogoutFilter@612ad3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@153010a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@187677f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@495d24, org.springframework.security.web.session.SessionManagementFilter@1009eb1, org.springframework.security.web.access.ExceptionTranslationFilter@6116a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b09535]
-2022-08-03 19:17:53.265  INFO 12404 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 19:17:53.591  INFO 12404 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-08-03 19:17:54.235  INFO 12404 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 19:17:54.250  INFO 12404 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 19:17:54.453  INFO 12404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
-2022-08-03 19:17:54.455  INFO 12404 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 19:17:54.512  INFO 12404 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 19:17:54.666  INFO 12404 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 19:17:55.005  INFO 12404 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 19:17:55.715  INFO 12404 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 19:17:55.733  INFO 12404 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 10.407 seconds (JVM running for 11.674)
-2022-08-03 19:19:52.915  INFO 12404 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-08-03 19:19:53.312  INFO 12404 --- [RMI TCP Connection(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 19:19:53.313  INFO 12404 --- [RMI TCP Connection(4)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 19:19:53.333  INFO 12404 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 19:19:53.559  WARN 12404 --- [RMI TCP Connection(4)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2022-08-03 19:19:53.560  INFO 12404 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 19:19:53.563  INFO 12404 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 19:21:37.064  INFO 18268 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on DESKTOP-3JMLSMQ with PID 18268 (D:\eclipse-workspace\audit-management\Authentication-microservice\target\classes started by Sinchana in D:\eclipse-workspace\audit-management\Authentication-microservice)
-2022-08-03 19:21:37.067  INFO 18268 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
-2022-08-03 19:21:37.140  INFO 18268 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-08-03 19:21:37.140  INFO 18268 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-08-03 19:21:39.333  INFO 18268 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 19:21:39.457  INFO 18268 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110ms. Found 1 JPA repository interfaces.
-2022-08-03 19:21:41.029  INFO 18268 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-08-03 19:21:41.050  INFO 18268 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-03 19:21:41.052  INFO 18268 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2022-08-03 19:21:41.300  INFO 18268 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
-2022-08-03 19:21:41.301  INFO 18268 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4159 ms
-2022-08-03 19:21:41.695  INFO 18268 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 19:21:42.101  INFO 18268 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 19:21:42.119  INFO 18268 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
-2022-08-03 19:21:42.418  INFO 18268 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 19:21:42.519  INFO 18268 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 19:21:42.626  WARN 18268 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 19:21:42.674  INFO 18268 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 19:21:43.143  INFO 18268 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 19:21:43.415  INFO 18268 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 19:21:43.652  INFO 18268 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 19:21:44.168  INFO 18268 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@be38f2, org.springframework.security.web.context.SecurityContextPersistenceFilter@1fd6744, org.springframework.security.web.header.HeaderWriterFilter@134c3ce, org.springframework.security.web.authentication.logout.LogoutFilter@1f6df89, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d9254, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@598d87, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60b1c9, org.springframework.security.web.session.SessionManagementFilter@1c01557, org.springframework.security.web.access.ExceptionTranslationFilter@1356cf6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@119e66d]
-2022-08-03 19:21:44.211  INFO 18268 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 19:21:44.563  INFO 18268 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-08-03 19:21:45.108  INFO 18268 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 19:21:45.125  INFO 18268 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 19:21:45.349  INFO 18268 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
-2022-08-03 19:21:45.351  INFO 18268 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 19:21:45.392  INFO 18268 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 19:21:45.474  INFO 18268 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 19:21:45.719  INFO 18268 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 19:21:46.428  INFO 18268 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 19:21:46.455  INFO 18268 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 9.98 seconds (JVM running for 10.93)
-2022-08-03 19:28:26.607  INFO 18268 --- [RMI TCP Connection(16)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-08-03 19:28:27.030  INFO 18268 --- [RMI TCP Connection(16)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 19:28:27.030  INFO 18268 --- [RMI TCP Connection(16)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 19:28:27.041  INFO 18268 --- [RMI TCP Connection(16)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 19:28:27.268  WARN 18268 --- [RMI TCP Connection(16)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2022-08-03 19:28:27.270  INFO 18268 --- [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 19:28:27.275  INFO 18268 --- [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 19:29:21.207  INFO 22452 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on DESKTOP-3JMLSMQ with PID 22452 (D:\eclipse-workspace\audit-management\Authentication-microservice\target\classes started by Sinchana in D:\eclipse-workspace\audit-management\Authentication-microservice)
-2022-08-03 19:29:21.221  INFO 22452 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
-2022-08-03 19:29:21.489  INFO 22452 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-08-03 19:29:21.490  INFO 22452 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-08-03 19:29:24.672  INFO 22452 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 19:29:24.826  INFO 22452 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133ms. Found 1 JPA repository interfaces.
-2022-08-03 19:29:25.951  INFO 22452 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-08-03 19:29:25.969  INFO 22452 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-03 19:29:25.970  INFO 22452 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2022-08-03 19:29:26.182  INFO 22452 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
-2022-08-03 19:29:26.183  INFO 22452 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4692 ms
-2022-08-03 19:29:26.544  INFO 22452 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 19:29:26.889  INFO 22452 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 19:29:26.908  INFO 22452 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
-2022-08-03 19:29:27.233  INFO 22452 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 19:29:27.328  INFO 22452 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 19:29:27.420  WARN 22452 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 19:29:27.434  INFO 22452 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 19:29:27.773  INFO 22452 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 19:29:28.020  INFO 22452 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 19:29:28.302  INFO 22452 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 19:29:28.827  INFO 22452 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1dd9f91, org.springframework.security.web.context.SecurityContextPersistenceFilter@11502d6, org.springframework.security.web.header.HeaderWriterFilter@16a2ef7, org.springframework.security.web.authentication.logout.LogoutFilter@1b064b2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@155b934, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66a373, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8eaf68, org.springframework.security.web.session.SessionManagementFilter@10cbdef, org.springframework.security.web.access.ExceptionTranslationFilter@24cf1d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17a005b]
-2022-08-03 19:29:28.871  INFO 22452 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 19:29:29.332  INFO 22452 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-08-03 19:29:29.658  INFO 22452 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 19:29:29.671  INFO 22452 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 19:29:29.883  INFO 22452 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
-2022-08-03 19:29:29.885  INFO 22452 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 19:29:29.926  INFO 22452 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 19:29:30.007  INFO 22452 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 19:29:30.206  INFO 22452 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 19:29:30.744  INFO 22452 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 19:29:30.763  INFO 22452 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 10.569 seconds (JVM running for 16.048)
-2022-08-03 19:31:31.150  INFO 22452 --- [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-08-03 19:31:31.419  INFO 22452 --- [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 19:31:31.420  INFO 22452 --- [RMI TCP Connection(10)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 19:31:31.429  INFO 22452 --- [RMI TCP Connection(10)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 19:31:31.656  WARN 22452 --- [RMI TCP Connection(10)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2022-08-03 19:31:31.657  INFO 22452 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 19:31:31.666  INFO 22452 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 19:34:59.582  INFO 2548 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on LAPTOP-GA6HJUIM with PID 2548 (D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice\target\classes started by manik in D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice)
-2022-08-03 19:34:59.600  INFO 2548 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
-2022-08-03 19:34:59.658  INFO 2548 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-08-03 19:34:59.660  INFO 2548 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-08-03 19:35:01.126  INFO 2548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 19:35:01.325  INFO 2548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 182ms. Found 1 JPA repository interfaces.
-2022-08-03 19:35:02.361  INFO 2548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-08-03 19:35:02.372  INFO 2548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-03 19:35:02.373  INFO 2548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2022-08-03 19:35:02.483  INFO 2548 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
-2022-08-03 19:35:02.483  INFO 2548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2823 ms
-2022-08-03 19:35:02.636  INFO 2548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 19:35:02.880  INFO 2548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 19:35:02.887  INFO 2548 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
-2022-08-03 19:35:03.058  INFO 2548 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 19:35:03.117  INFO 2548 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 19:35:03.165  WARN 2548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 19:35:03.205  INFO 2548 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 19:35:03.408  INFO 2548 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 19:35:03.584  INFO 2548 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 19:35:03.646  INFO 2548 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 19:35:03.861  INFO 2548 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f2390ae, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a652198, org.springframework.security.web.header.HeaderWriterFilter@27383def, org.springframework.security.web.authentication.logout.LogoutFilter@566bbf61, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6544fd78, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31a5adb8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52c9fd25, org.springframework.security.web.session.SessionManagementFilter@337233f7, org.springframework.security.web.access.ExceptionTranslationFilter@778bdd85, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@23d3d753]
-2022-08-03 19:35:03.886  INFO 2548 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 19:35:04.074  INFO 2548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-08-03 19:35:04.406  INFO 2548 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 19:35:04.419  INFO 2548 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 19:35:04.706  INFO 2548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
-2022-08-03 19:35:04.707  INFO 2548 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 19:35:04.734  INFO 2548 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 19:35:04.776  INFO 2548 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 19:35:04.951  INFO 2548 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 19:35:05.282  INFO 2548 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 19:35:05.298  INFO 2548 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 6.383 seconds (JVM running for 7.412)
-2022-08-03 19:36:44.164  INFO 2548 --- [RMI TCP Connection(10)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-03 20:11:55.762  INFO 2548 --- [RMI TCP Connection(47)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-08-03 20:11:56.325  INFO 2548 --- [RMI TCP Connection(47)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 20:11:56.349  INFO 2548 --- [RMI TCP Connection(47)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 20:11:56.384  INFO 2548 --- [RMI TCP Connection(47)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 20:11:56.674  WARN 2548 --- [RMI TCP Connection(47)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2022-08-03 20:11:56.674  INFO 2548 --- [RMI TCP Connection(47)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 20:11:56.681  INFO 2548 --- [RMI TCP Connection(47)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-03 20:43:14.574  INFO 9700 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on LAPTOP-GA6HJUIM with PID 9700 (D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice\target\classes started by manik in D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice)
-2022-08-03 20:43:14.625  INFO 9700 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
-2022-08-03 20:43:14.722  INFO 9700 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-08-03 20:43:14.723  INFO 9700 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-08-03 20:43:17.697  INFO 9700 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-03 20:43:17.861  INFO 9700 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 130ms. Found 1 JPA repository interfaces.
-2022-08-03 20:43:18.855  INFO 9700 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-08-03 20:43:18.875  INFO 9700 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-03 20:43:18.875  INFO 9700 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2022-08-03 20:43:19.074  INFO 9700 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
-2022-08-03 20:43:19.074  INFO 9700 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4351 ms
-2022-08-03 20:43:19.341  INFO 9700 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-03 20:43:19.692  INFO 9700 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-03 20:43:19.702  INFO 9700 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
-2022-08-03 20:43:20.069  INFO 9700 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-03 20:43:20.230  INFO 9700 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-03 20:43:20.359  WARN 9700 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-03 20:43:20.403  INFO 9700 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-03 20:43:20.753  INFO 9700 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-03 20:43:20.992  INFO 9700 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-03 20:43:21.182  INFO 9700 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-03 20:43:22.427  INFO 9700 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@370c3f61, org.springframework.security.web.context.SecurityContextPersistenceFilter@557d7319, org.springframework.security.web.header.HeaderWriterFilter@1b4f56db, org.springframework.security.web.authentication.logout.LogoutFilter@32491ad9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4dd7b0b0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5464b1d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@71b53704, org.springframework.security.web.session.SessionManagementFilter@6e7f21ef, org.springframework.security.web.access.ExceptionTranslationFilter@a89edf5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@334278b6]
-2022-08-03 20:43:22.463  INFO 9700 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-03 20:43:22.713  WARN 9700 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2022-08-03 20:43:23.065  INFO 9700 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-03 20:43:23.076  INFO 9700 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 20:43:23.328  INFO 9700 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
-2022-08-03 20:43:23.329  INFO 9700 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-03 20:43:23.361  INFO 9700 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-03 20:43:23.420  INFO 9700 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-03 20:43:23.593  INFO 9700 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-03 20:43:23.983  INFO 9700 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-03 20:43:24.003  INFO 9700 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 10.352 seconds (JVM running for 12.489)
-2022-08-03 20:43:25.317  INFO 9700 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-03 20:56:39.138 ERROR 9700 --- [http-nio-8081-exec-5] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/auth] threw exception [Request processing failed; nested exception is java.lang.StringIndexOutOfBoundsException: begin 7, end 3, length 3] with root cause
-
-java.lang.StringIndexOutOfBoundsException: begin 7, end 3, length 3
-	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4604) ~[na:na]
-	at java.base/java.lang.String.substring(String.java:2707) ~[na:na]
-	at java.base/java.lang.String.substring(String.java:2680) ~[na:na]
-	at com.cts.auth.controller.AuthController.validate(AuthController.java:50) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.3.4.RELEASE.jar:2.3.4.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2022-08-03 20:56:54.753 ERROR 9700 --- [http-nio-8081-exec-7] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/auth] threw exception [Request processing failed; nested exception is java.lang.StringIndexOutOfBoundsException: begin 7, end 6, length 6] with root cause
-
-java.lang.StringIndexOutOfBoundsException: begin 7, end 6, length 6
-	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4604) ~[na:na]
-	at java.base/java.lang.String.substring(String.java:2707) ~[na:na]
-	at java.base/java.lang.String.substring(String.java:2680) ~[na:na]
-	at com.cts.auth.controller.AuthController.validate(AuthController.java:50) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.3.4.RELEASE.jar:2.3.4.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2022-08-03 21:06:42.499  INFO 9700 --- [RMI TCP Connection(36)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-08-03 21:06:42.638  INFO 9700 --- [RMI TCP Connection(36)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-03 21:06:42.639  INFO 9700 --- [RMI TCP Connection(36)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-03 21:06:42.662  INFO 9700 --- [RMI TCP Connection(36)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-03 21:06:42.874  WARN 9700 --- [RMI TCP Connection(36)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2022-08-03 21:06:42.875  INFO 9700 --- [RMI TCP Connection(36)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-03 21:06:42.877  INFO 9700 --- [RMI TCP Connection(36)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-04 12:03:46.755  INFO 5620 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on DESKTOP-M1R7M81 with PID 5620 (F:\Audit Project\audit-management\Authentication-microservice\target\classes started by USER in F:\Audit Project\audit-management\Authentication-microservice)
-2022-08-04 12:03:46.810  INFO 5620 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
-2022-08-04 12:03:47.176  INFO 5620 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-08-04 12:03:47.177  INFO 5620 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-08-04 12:03:58.276  INFO 5620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-04 12:03:58.706  INFO 5620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 361ms. Found 1 JPA repository interfaces.
-2022-08-04 12:04:04.396  INFO 5620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-08-04 12:04:04.458  INFO 5620 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-04 12:04:04.459  INFO 5620 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2022-08-04 12:04:05.285  INFO 5620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
-2022-08-04 12:04:05.287  INFO 5620 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 18109 ms
-2022-08-04 12:04:06.507  INFO 5620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-04 12:04:07.873  INFO 5620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-04 12:04:07.951  INFO 5620 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
-2022-08-04 12:04:09.142  INFO 5620 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-04 12:04:09.545  INFO 5620 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-04 12:04:09.917  WARN 5620 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-04 12:04:10.004  INFO 5620 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-04 12:04:11.244  INFO 5620 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-04 12:04:12.246  INFO 5620 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-04 12:04:13.459  INFO 5620 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-04 12:04:15.324  INFO 5620 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37bd5a43, org.springframework.security.web.context.SecurityContextPersistenceFilter@37db812, org.springframework.security.web.header.HeaderWriterFilter@2301c91c, org.springframework.security.web.authentication.logout.LogoutFilter@48ea48a1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69c2bdf9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@109257fc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@204f795f, org.springframework.security.web.session.SessionManagementFilter@34befa97, org.springframework.security.web.access.ExceptionTranslationFilter@183f4e2a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f432570]
-2022-08-04 12:04:15.504  INFO 5620 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-04 12:04:16.656  INFO 5620 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-08-04 12:04:18.411  INFO 5620 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-04 12:04:18.502  INFO 5620 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-04 12:04:19.579  INFO 5620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
-2022-08-04 12:04:19.588  INFO 5620 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-04 12:04:19.737  INFO 5620 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-04 12:04:20.053  INFO 5620 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-04 12:04:21.011  INFO 5620 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-04 12:04:23.197  INFO 5620 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-04 12:04:23.262  INFO 5620 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 39.325 seconds (JVM running for 47.933)
-2022-08-04 12:04:38.935  INFO 5620 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-04 12:05:32.633  INFO 5620 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-04 12:05:32.677  INFO 5620 --- [Thread-8] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-04 12:05:32.770  INFO 5620 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-04 12:05:33.046  WARN 5620 --- [Thread-8] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2022-08-04 12:05:33.050  INFO 5620 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-04 12:05:33.072  INFO 5620 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-04 12:05:34.435  INFO 5620 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on DESKTOP-M1R7M81 with PID 5620 (F:\Audit Project\audit-management\Authentication-microservice\target\classes started by USER in F:\Audit Project\audit-management\Authentication-microservice)
-2022-08-04 12:05:34.440  INFO 5620 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
-2022-08-04 12:05:37.972  INFO 5620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-04 12:05:38.057  INFO 5620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81ms. Found 1 JPA repository interfaces.
-2022-08-04 12:05:39.365  INFO 5620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-08-04 12:05:39.368  INFO 5620 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-04 12:05:39.370  INFO 5620 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2022-08-04 12:05:39.476  INFO 5620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
-2022-08-04 12:05:39.478  INFO 5620 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5009 ms
-2022-08-04 12:05:39.758  INFO 5620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2022-08-04 12:05:39.772  INFO 5620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2022-08-04 12:05:39.774  INFO 5620 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
-2022-08-04 12:05:40.168  INFO 5620 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-04 12:05:40.212  INFO 5620 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-04 12:05:40.245  INFO 5620 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-04 12:05:40.416  WARN 5620 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-04 12:05:40.549  INFO 5620 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-04 12:05:40.551  INFO 5620 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-04 12:05:40.626  INFO 5620 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-08-04 12:05:41.466  INFO 5620 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-04 12:05:41.753  INFO 5620 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72849923, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f47f760, org.springframework.security.web.header.HeaderWriterFilter@489bc305, org.springframework.security.web.authentication.logout.LogoutFilter@39aa636d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3548400, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1541fc84, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17fe2d6f, org.springframework.security.web.session.SessionManagementFilter@24290256, org.springframework.security.web.access.ExceptionTranslationFilter@66b35b8b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2cb15509]
-2022-08-04 12:05:41.793  INFO 5620 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-04 12:05:42.927  INFO 5620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
-2022-08-04 12:05:42.938  INFO 5620 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-04 12:05:42.945  INFO 5620 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-04 12:05:43.058  INFO 5620 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-04 12:05:43.212  INFO 5620 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-04 12:05:43.437  INFO 5620 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-04 12:05:43.487  INFO 5620 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 9.301 seconds (JVM running for 128.158)
-2022-08-04 12:05:43.584  INFO 5620 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-08-04 12:05:47.080  INFO 5620 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-04 12:13:36.127  INFO 5620 --- [RMI TCP Connection(25)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-08-04 12:13:37.298  INFO 5620 --- [RMI TCP Connection(25)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-04 12:13:37.314  INFO 5620 --- [RMI TCP Connection(25)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-04 12:13:37.416  INFO 5620 --- [RMI TCP Connection(25)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-04 12:13:37.633  WARN 5620 --- [RMI TCP Connection(25)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2022-08-04 12:13:37.636  INFO 5620 --- [RMI TCP Connection(25)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2022-08-04 12:13:37.647  INFO 5620 --- [RMI TCP Connection(25)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2022-08-04 15:50:14.638  INFO 11764 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on LAPTOP-GA6HJUIM with PID 11764 (D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice\target\classes started by manik in D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice)
-2022-08-04 15:50:14.653  INFO 11764 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
-2022-08-04 15:50:14.739  INFO 11764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-08-04 15:50:14.740  INFO 11764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-08-04 15:50:16.120  INFO 11764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-04 15:50:16.198  INFO 11764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64ms. Found 1 JPA repository interfaces.
-2022-08-04 15:50:17.764  INFO 11764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-08-04 15:50:17.778  INFO 11764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-04 15:50:17.778  INFO 11764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2022-08-04 15:50:17.874  INFO 11764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
-2022-08-04 15:50:17.875  INFO 11764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3135 ms
-2022-08-04 15:50:18.043  INFO 11764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-04 15:50:18.272  INFO 11764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-04 15:50:18.280  INFO 11764 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
-2022-08-04 15:50:18.462  INFO 11764 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-04 15:50:18.530  INFO 11764 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-04 15:50:18.585  WARN 11764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-04 15:50:18.620  INFO 11764 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2022-08-04 15:50:18.847  INFO 11764 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2022-08-04 15:50:19.049  INFO 11764 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-04 15:50:19.172  INFO 11764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-04 15:50:19.446  INFO 11764 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d9facbc, org.springframework.security.web.context.SecurityContextPersistenceFilter@18293656, org.springframework.security.web.header.HeaderWriterFilter@523036b8, org.springframework.security.web.authentication.logout.LogoutFilter@29b51ae2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6b122ff0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71a205b1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4677b9c0, org.springframework.security.web.session.SessionManagementFilter@56bcb9f4, org.springframework.security.web.access.ExceptionTranslationFilter@4b3a5af0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64e03fc3]
-2022-08-04 15:50:19.467  INFO 11764 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-04 15:50:19.697  INFO 11764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-08-04 15:50:19.915  INFO 11764 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-04 15:50:19.923  INFO 11764 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-04 15:50:20.174  INFO 11764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
-2022-08-04 15:50:20.175  INFO 11764 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-04 15:50:20.211  INFO 11764 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-04 15:50:20.265  INFO 11764 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-04 15:50:20.436  INFO 11764 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-04 15:50:20.733  INFO 11764 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-04 15:50:20.748  INFO 11764 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 6.768 seconds (JVM running for 7.76)
-2022-08-04 15:50:22.787  INFO 11764 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-04 16:02:00.151  INFO 11764 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-04 16:02:00.155  INFO 11764 --- [Thread-5] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-04 16:02:00.171  INFO 11764 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-08-04 16:02:00.389  WARN 11764 --- [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2022-08-04 16:02:00.390  INFO 11764 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-04 16:02:00.392  INFO 11764 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-04 16:02:00.710  INFO 11764 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on LAPTOP-GA6HJUIM with PID 11764 (D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice\target\classes started by manik in D:\maniDoc\Documents\audit-management\audit-management\Authentication-microservice)
-2022-08-04 16:02:00.713  INFO 11764 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
-2022-08-04 16:02:01.320  INFO 11764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2022-08-04 16:02:01.332  INFO 11764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 1 JPA repository interfaces.
-2022-08-04 16:02:01.472  INFO 11764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-08-04 16:02:01.473  INFO 11764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-04 16:02:01.474  INFO 11764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2022-08-04 16:02:01.501  INFO 11764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
-2022-08-04 16:02:01.501  INFO 11764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 780 ms
-2022-08-04 16:02:01.547  INFO 11764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2022-08-04 16:02:01.549  INFO 11764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2022-08-04 16:02:01.549  INFO 11764 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
-2022-08-04 16:02:01.606  INFO 11764 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-08-04 16:02:01.614  INFO 11764 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-04 16:02:01.619  INFO 11764 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-04 16:02:01.644  WARN 11764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-04 16:02:01.659  INFO 11764 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-04 16:02:01.660  INFO 11764 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-04 16:02:01.725  INFO 11764 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-08-04 16:02:01.804  INFO 11764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
-2022-08-04 16:02:01.844  INFO 11764 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3115d5ea, org.springframework.security.web.context.SecurityContextPersistenceFilter@27697fcb, org.springframework.security.web.header.HeaderWriterFilter@22ada792, org.springframework.security.web.authentication.logout.LogoutFilter@1bea3ee9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c49a34f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73971263, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e364661, org.springframework.security.web.session.SessionManagementFilter@6da31e49, org.springframework.security.web.access.ExceptionTranslationFilter@223330a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19ec5db3]
-2022-08-04 16:02:01.850  INFO 11764 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-08-04 16:02:01.995  INFO 11764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
-2022-08-04 16:02:01.995  INFO 11764 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-04 16:02:01.997  INFO 11764 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-04 16:02:02.008  INFO 11764 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-04 16:02:02.031  INFO 11764 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2022-08-04 16:02:02.062  INFO 11764 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2022-08-04 16:02:02.070  INFO 11764 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 1.435 seconds (JVM running for 709.083)
-2022-08-04 16:02:02.092  INFO 11764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-08-04 16:03:37.659  INFO 11764 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-05 09:35:34.570  INFO 10068 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on DESKTOP-M1R7M81 with PID 10068 (F:\Audit Project\audit-management\Authentication-microservice\target\classes started by USER in F:\Audit Project\audit-management\Authentication-microservice)
+2022-08-05 09:35:34.605  INFO 10068 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
+2022-08-05 09:35:34.862  INFO 10068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-05 09:35:34.863  INFO 10068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-05 09:35:40.069  INFO 10068 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-08-05 09:35:40.328  INFO 10068 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 222ms. Found 1 JPA repository interfaces.
+2022-08-05 09:35:42.928  INFO 10068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-08-05 09:35:42.968  INFO 10068 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-05 09:35:42.970  INFO 10068 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-08-05 09:35:43.387  INFO 10068 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
+2022-08-05 09:35:43.387  INFO 10068 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8523 ms
+2022-08-05 09:35:44.065  INFO 10068 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-05 09:35:44.796  INFO 10068 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-05 09:35:44.829  INFO 10068 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
+2022-08-05 09:35:45.406  INFO 10068 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-05 09:35:45.645  INFO 10068 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-05 09:35:45.765  WARN 10068 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-05 09:35:45.915  INFO 10068 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2022-08-05 09:35:46.675  INFO 10068 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-08-05 09:35:47.249  INFO 10068 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-05 09:35:47.559  INFO 10068 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
+2022-08-05 09:35:48.617  INFO 10068 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@358c24a5, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a1a2c5f, org.springframework.security.web.header.HeaderWriterFilter@333e37be, org.springframework.security.web.authentication.logout.LogoutFilter@1f76a89d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@638e8550, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65fc46de, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49d4ff24, org.springframework.security.web.session.SessionManagementFilter@481ad643, org.springframework.security.web.access.ExceptionTranslationFilter@4bd34cc5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@aca7c08]
+2022-08-05 09:35:48.715  INFO 10068 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-05 09:35:49.409  INFO 10068 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-05 09:35:50.950  INFO 10068 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-05 09:35:50.981  INFO 10068 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-05 09:35:51.917  INFO 10068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
+2022-08-05 09:35:51.920  INFO 10068 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-08-05 09:35:52.256  INFO 10068 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-08-05 09:35:52.413  INFO 10068 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-05 09:35:53.116  INFO 10068 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2022-08-05 09:35:54.297  INFO 10068 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2022-08-05 09:35:54.335  INFO 10068 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 21.676 seconds (JVM running for 25.727)
+2022-08-05 09:36:05.387  INFO 10068 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-05 09:38:13.418  INFO 10068 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 09:46:08.799  INFO 10068 --- [http-nio-8081-exec-3] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 09:48:44.400  INFO 10068 --- [RMI TCP Connection(22)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-08-05 09:48:45.310  INFO 10068 --- [RMI TCP Connection(22)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-05 09:48:45.331  INFO 10068 --- [RMI TCP Connection(22)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-08-05 09:48:45.398  INFO 10068 --- [RMI TCP Connection(22)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-05 09:48:45.665  WARN 10068 --- [RMI TCP Connection(22)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-08-05 09:48:45.669  INFO 10068 --- [RMI TCP Connection(22)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-05 09:48:45.684  INFO 10068 --- [RMI TCP Connection(22)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-05 10:10:44.930  INFO 4556 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Starting AuthenticationMicroserviceApplication on DESKTOP-M1R7M81 with PID 4556 (F:\Audit Project\audit-management\Authentication-microservice\target\classes started by USER in F:\Audit Project\audit-management\Authentication-microservice)
+2022-08-05 10:10:44.948  INFO 4556 --- [restartedMain] .a.AuthenticationMicroserviceApplication : No active profile set, falling back to default profiles: default
+2022-08-05 10:10:45.224  INFO 4556 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-05 10:10:45.224  INFO 4556 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-05 10:10:53.191  INFO 4556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-08-05 10:10:53.474  INFO 4556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 245ms. Found 1 JPA repository interfaces.
+2022-08-05 10:10:57.038  INFO 4556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-08-05 10:10:57.089  INFO 4556 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-05 10:10:57.090  INFO 4556 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-08-05 10:10:57.665  INFO 4556 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring embedded WebApplicationContext
+2022-08-05 10:10:57.666  INFO 4556 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12441 ms
+2022-08-05 10:10:59.110  INFO 4556 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-05 10:11:00.015  INFO 4556 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-05 10:11:00.072  INFO 4556 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auth'
+2022-08-05 10:11:00.824  INFO 4556 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-05 10:11:01.310  INFO 4556 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-05 10:11:01.480  WARN 4556 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-05 10:11:01.703  INFO 4556 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2022-08-05 10:11:02.710  INFO 4556 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-08-05 10:11:03.466  INFO 4556 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-05 10:11:04.016  INFO 4556 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/auth/manage'
+2022-08-05 10:11:05.341  INFO 4556 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@402d3996, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d1f6d3b, org.springframework.security.web.header.HeaderWriterFilter@7e44e26b, org.springframework.security.web.authentication.logout.LogoutFilter@5469f9f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c399d65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57937e83, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3793cf26, org.springframework.security.web.session.SessionManagementFilter@67cb8148, org.springframework.security.web.access.ExceptionTranslationFilter@29463ccb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5608a10b]
+2022-08-05 10:11:05.448  INFO 4556 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-05 10:11:06.388  INFO 4556 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-05 10:11:08.000  INFO 4556 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-05 10:11:08.044  INFO 4556 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-05 10:11:08.867  INFO 4556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/auth'
+2022-08-05 10:11:08.875  INFO 4556 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-08-05 10:11:09.008  INFO 4556 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-08-05 10:11:09.312  INFO 4556 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-05 10:11:09.958  INFO 4556 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2022-08-05 10:11:11.860  INFO 4556 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2022-08-05 10:11:11.912  INFO 4556 --- [restartedMain] .a.AuthenticationMicroserviceApplication : Started AuthenticationMicroserviceApplication in 29.294 seconds (JVM running for 33.131)
+2022-08-05 10:12:54.278  INFO 4556 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/auth]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-05 10:41:08.154  INFO 4556 --- [http-nio-8081-exec-7] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:43:21.632  INFO 4556 --- [http-nio-8081-exec-3] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:43:21.680  INFO 4556 --- [http-nio-8081-exec-3] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:43:30.863  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:43:30.870  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:43:43.271  INFO 4556 --- [http-nio-8081-exec-5] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:43:43.282  INFO 4556 --- [http-nio-8081-exec-5] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:44:08.490  INFO 4556 --- [http-nio-8081-exec-7] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:44:08.502  INFO 4556 --- [http-nio-8081-exec-7] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:45:02.971  INFO 4556 --- [http-nio-8081-exec-10] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:45:02.977  INFO 4556 --- [http-nio-8081-exec-10] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:45:03.859  INFO 4556 --- [http-nio-8081-exec-9] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:45:03.866  INFO 4556 --- [http-nio-8081-exec-9] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:45:04.563  INFO 4556 --- [http-nio-8081-exec-1] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:45:04.588  INFO 4556 --- [http-nio-8081-exec-1] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:45:08.942  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:45:08.948  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:45:16.826  INFO 4556 --- [http-nio-8081-exec-3] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:45:16.835  INFO 4556 --- [http-nio-8081-exec-3] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:45:21.782  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:45:21.797  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:46:03.139  INFO 4556 --- [http-nio-8081-exec-5] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:46:03.147  INFO 4556 --- [http-nio-8081-exec-5] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:47:07.084  INFO 4556 --- [http-nio-8081-exec-7] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:47:07.093  INFO 4556 --- [http-nio-8081-exec-7] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:47:08.811  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:47:08.820  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:47:30.878  INFO 4556 --- [http-nio-8081-exec-10] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:47:30.888  INFO 4556 --- [http-nio-8081-exec-10] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:47:48.773  INFO 4556 --- [http-nio-8081-exec-9] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:47:48.783  INFO 4556 --- [http-nio-8081-exec-9] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:47:50.298  INFO 4556 --- [http-nio-8081-exec-1] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:47:50.306  INFO 4556 --- [http-nio-8081-exec-1] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:48:19.355  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:48:19.363  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:48:23.221  INFO 4556 --- [http-nio-8081-exec-3] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:48:23.231  INFO 4556 --- [http-nio-8081-exec-3] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:48:42.920  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:48:42.926  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:49:27.588  INFO 4556 --- [http-nio-8081-exec-5] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:49:27.595  INFO 4556 --- [http-nio-8081-exec-5] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 10:50:09.039  INFO 4556 --- [http-nio-8081-exec-6] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 10:50:09.046  INFO 4556 --- [http-nio-8081-exec-6] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:15:11.447  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:16:02.932  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:16:02.942  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:18:45.457  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:18:45.465  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:19:53.183  INFO 4556 --- [http-nio-8081-exec-6] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:19:53.191  INFO 4556 --- [http-nio-8081-exec-6] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:21:53.363  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:21:53.376  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:21:57.915  INFO 4556 --- [http-nio-8081-exec-10] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:21:57.928  INFO 4556 --- [http-nio-8081-exec-10] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:27:31.929  INFO 4556 --- [http-nio-8081-exec-1] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:27:31.946  INFO 4556 --- [http-nio-8081-exec-1] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:27:35.607  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:27:35.615  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:28:38.428  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:28:38.439  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:28:43.960  INFO 4556 --- [http-nio-8081-exec-5] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:28:43.967  INFO 4556 --- [http-nio-8081-exec-5] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:33:23.005  INFO 4556 --- [http-nio-8081-exec-7] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:33:23.012  INFO 4556 --- [http-nio-8081-exec-7] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:34:05.954  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:34:05.961  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:34:43.579  INFO 4556 --- [http-nio-8081-exec-10] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:34:43.589  INFO 4556 --- [http-nio-8081-exec-10] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:35:52.710  INFO 4556 --- [http-nio-8081-exec-1] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:35:52.719  INFO 4556 --- [http-nio-8081-exec-1] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:37:46.483  INFO 4556 --- [http-nio-8081-exec-3] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:37:46.493  INFO 4556 --- [http-nio-8081-exec-3] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:38:51.105  INFO 4556 --- [http-nio-8081-exec-5] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:38:51.117  INFO 4556 --- [http-nio-8081-exec-5] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:39:11.594  INFO 4556 --- [http-nio-8081-exec-6] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:39:11.608  INFO 4556 --- [http-nio-8081-exec-6] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:43:45.049  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:43:45.071  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:47:26.671  INFO 4556 --- [http-nio-8081-exec-9] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:47:50.897  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:47:50.907  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:49:19.631  INFO 4556 --- [http-nio-8081-exec-6] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:49:19.641  INFO 4556 --- [http-nio-8081-exec-6] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 11:49:36.377  INFO 4556 --- [http-nio-8081-exec-7] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 11:49:36.383  INFO 4556 --- [http-nio-8081-exec-7] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:26:25.618  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:26:25.698  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:29:52.315  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:29:52.327  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:31:38.674  INFO 4556 --- [http-nio-8081-exec-6] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:31:38.685  INFO 4556 --- [http-nio-8081-exec-6] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:33:05.875  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:33:05.882  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:33:41.630  INFO 4556 --- [http-nio-8081-exec-10] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:33:41.644  INFO 4556 --- [http-nio-8081-exec-10] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:34:31.963  INFO 4556 --- [http-nio-8081-exec-9] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:34:31.974  INFO 4556 --- [http-nio-8081-exec-9] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:36:59.384  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:36:59.389  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:37:35.322  INFO 4556 --- [http-nio-8081-exec-3] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:37:35.333  INFO 4556 --- [http-nio-8081-exec-3] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:38:12.203  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:38:12.217  INFO 4556 --- [http-nio-8081-exec-4] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:39:31.802  INFO 4556 --- [http-nio-8081-exec-6] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:39:31.846  INFO 4556 --- [http-nio-8081-exec-6] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:43:04.517  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:43:04.525  INFO 4556 --- [http-nio-8081-exec-8] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:44:43.161  INFO 4556 --- [http-nio-8081-exec-9] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:44:43.166  INFO 4556 --- [http-nio-8081-exec-9] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 12:47:07.761  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 12:47:07.767  INFO 4556 --- [http-nio-8081-exec-2] com.cts.auth.controller.AuthController   : after validation................................
+2022-08-05 13:12:29.340  INFO 4556 --- [http-nio-8081-exec-7] com.cts.auth.controller.AuthController   : inside validation................................
+2022-08-05 13:12:29.383  INFO 4556 --- [http-nio-8081-exec-7] com.cts.auth.controller.AuthController   : after validation................................

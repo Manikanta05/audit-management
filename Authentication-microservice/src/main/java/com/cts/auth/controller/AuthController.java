@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cts.auth.exceptions.TokenNotValidException;
 import com.cts.auth.exceptions.UserNameNumericException;
 import com.cts.auth.exceptions.UserNotFoundException;
 import com.cts.auth.model.UserCredentials;

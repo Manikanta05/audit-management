@@ -31,10 +31,10 @@ public class CheckListController {
 	}
 	
 	@GetMapping("/AuditCheckListQuestions/{audittype}")
-	public ResponseEntity<List<QuestionEntity>> getQuestions(@RequestHeader(name = "Authorization") String token,@PathVariable String audittype){
+	public ResponseEntity<List<String>> getQuestions(@RequestHeader(value="Authorization") String token,@PathVariable String audittype){
 		ResponseEntity<Boolean> validate = authFeign.validate(token);
 		if(validate.getBody())
-		return new ResponseEntity<List<QuestionEntity>>( questionServiceImpl.getQuestions(audittype),HttpStatus.OK);
+		return new ResponseEntity<>(questionServiceImpl.getQuestions(audittype),HttpStatus.OK);
 		else
 			throw new TokenExpiredException("Token is expired or Invalid token, please login again!");
 		

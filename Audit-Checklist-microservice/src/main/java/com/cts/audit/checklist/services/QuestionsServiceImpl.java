@@ -1,5 +1,6 @@
 package com.cts.audit.checklist.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +19,13 @@ public class QuestionsServiceImpl implements QuestionsService {
 	private QuestionsRepository repo;
 	@Override
 	@ApiModelProperty(notes = "This function loads question from database based on audit type ")
-	public List<QuestionEntity> getQuestions(String auditType)  {
-		
-		return repo.findByAudittype(auditType);
+	public List<String> getQuestions(String auditType)  {
+		List<QuestionEntity> list = repo.findByAudittype(auditType);
+		List<String> questions=new ArrayList<>();
+		for(QuestionEntity question:list) {
+			questions.add(question.getQuestion());
+		}
+		return questions;
 	}
 
 	
