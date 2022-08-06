@@ -8,3 +8,5 @@ Audit-Checklist-microservice/bin/.mvn/wrapper/maven-wrapper.properties
 Audit-Checklist-microservice/bin/.mvn/wrapper/maven-wrapper.jar
 logs/benchmark.txt*
 
+*.txt
+*.gz
