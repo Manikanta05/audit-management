@@ -29,8 +29,8 @@ public class AuditRequestModelTest {
 	@Test
 	@ApiModelProperty(notes = "This method is used to test parameterized constructor")
 	public void testAuditRequestModelParameterizedConstructor() {
-		AuditRequestModel parameterizedQuestions = new AuditRequestModel(1,new AuditDetailModel(1,"Internal",new Date(2022,8,6),4),"Audit Management","Manish","Manikanta");
-		assertEquals("Audit Management",parameterizedQuestions.getProjectname());
+		AuditRequestModel parameterizedConstructor = new AuditRequestModel(1,new AuditDetailModel(1,"Internal",new Date(2022,8,6),4),"Audit Management","Manish","Manikanta");
+		assertEquals("Audit Management",parameterizedConstructor.getProjectname());
 	}
 	@Test
 	@ApiModelProperty(notes = "This method is used to test Getters")
