@@ -21,6 +21,12 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "auditdetail")
 public class AuditDetailModel {
+	@Override
+	public String toString() {
+		return "AuditDetailModel [auditid=" + auditid + ", audittype=" + audittype + ", auditdate=" + auditdate
+				+ ", countofno=" + countofno;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "AuditId")
@@ -34,8 +40,8 @@ public class AuditDetailModel {
 	private int countofno;
 	
 	
-	@OneToOne(mappedBy = "auditdetail")
-	private AuditRequestModel auditrequest;
+//	@OneToOne(mappedBy = "auditdetail")
+//	private AuditRequestModel auditrequest;
 
 	public int getAuditid() {
 		return auditid;

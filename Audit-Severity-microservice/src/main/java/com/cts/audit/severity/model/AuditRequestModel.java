@@ -18,6 +18,12 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "auditrequest")
 public class AuditRequestModel {
+	@Override
+	public String toString() {
+		return "AuditRequestModel [requestid=" + requestid + ", auditdetail=" + auditdetail + ", projectname="
+				+ projectname + ", managername=" + managername + ", ownername=" + ownername + "]";
+	}
+
 	@Id
 	@Column(name = "RequestId")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
