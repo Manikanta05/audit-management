@@ -1,4 +1,4 @@
-package com.cts.audit.severity.exceptions;
+package com.cts.audit.severity.pojo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
