@@ -24,7 +24,7 @@ public class AuditDetailModel {
 	@Override
 	public String toString() {
 		return "AuditDetailModel [auditid=" + auditid + ", audittype=" + audittype + ", auditdate=" + auditdate
-				+ ", countofno=" + countofno;
+				+ ", countofno=" + countofno + "]";
 	}
 
 	@Id
