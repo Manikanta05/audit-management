@@ -24,7 +24,7 @@ public class SeverityServiceImpl implements SeverityService {
 		AuditResponseModel response;
 		List<AuditBenchmark> benchmarkMap = benchmarkfeign.getBenchmarkMap();
 		String auditType = request.getAuditdetail().getAudittype();
-		int threshold, flag = 0;
+		int threshold;
 		if (auditType.equalsIgnoreCase("Internal")) {
 			threshold = benchmarkMap.get(0).getAccnoanswers();
 			if (count > threshold) {
