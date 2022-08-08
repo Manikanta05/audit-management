@@ -15,7 +15,7 @@ phases:
       - echo "Entered build phase"
       - echo "Building Java"
       - cd  Authentication-microservice
-      - mvn -DskipTests clean package
+      - mvn clean install -DskipTests
       - docker build -t audit-auth-registry:latest .
       - docker tag audit-auth-registry:latest 249113955330.dkr.ecr.ap-south-1.amazonaws.com/audit-auth-registry:latest
 
