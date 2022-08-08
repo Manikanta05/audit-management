@@ -18,7 +18,7 @@ phases:
       - echo "Entered build phase"
       - echo "Building Java"
       - cd  Authentication-microservice
-      - mvn -DskipTests clean package
+      - mvn clean package
       - docker build -t aws-practice-check-manish .
       - docker tag aws-practice-check-manish:latest $REPOSITORY_URI:$IMAGE_TAG
 
