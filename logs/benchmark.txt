@@ -1,70 +1,33 @@
-2022-08-05 13:50:24.952  INFO 7008 --- [restartedMain] .b.AuditBenchmarkMicroserviceApplication : Starting AuditBenchmarkMicroserviceApplication using Java 1.8.0_202 on DESKTOP-M1R7M81 with PID 7008 (F:\Audit Project\audit-management\Audit-Benchmark-microservice\target\classes started by USER in F:\Audit Project\audit-management\Audit-Benchmark-microservice)
-2022-08-05 13:50:24.977  INFO 7008 --- [restartedMain] .b.AuditBenchmarkMicroserviceApplication : No active profile set, falling back to 1 default profile: "default"
-2022-08-05 13:50:25.255  INFO 7008 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-08-05 13:50:25.257  INFO 7008 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-08-05 13:50:29.935  INFO 7008 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-05 13:50:30.166  INFO 7008 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 190 ms. Found 1 JPA repository interfaces.
-2022-08-05 13:50:31.133  INFO 7008 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=56d96617-7d58-3260-b747-f0b55728e51a
-2022-08-05 13:50:33.849  INFO 7008 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9092 (http)
-2022-08-05 13:50:33.900  INFO 7008 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-05 13:50:33.902  INFO 7008 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-08-05 13:50:34.428  INFO 7008 --- [restartedMain] o.a.c.c.C.[.[localhost].[/benchmark]     : Initializing Spring embedded WebApplicationContext
-2022-08-05 13:50:34.429  INFO 7008 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9169 ms
-2022-08-05 13:50:35.035  INFO 7008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-05 13:50:36.139  INFO 7008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-05 13:50:36.194  INFO 7008 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:benchmark'
-2022-08-05 13:50:36.917  INFO 7008 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-05 13:50:37.203  INFO 7008 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-08-05 13:50:38.068  INFO 7008 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-05 13:50:38.619  INFO 7008 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-05 13:50:41.312  INFO 7008 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-05 13:50:41.355  INFO 7008 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-05 13:50:43.258  WARN 7008 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-05 13:50:45.752  WARN 7008 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2022-08-05 13:50:47.178  INFO 7008 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/benchmark/manage'
-2022-08-05 13:50:47.251  INFO 7008 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[.[localhost].[/benchmark]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-05 13:50:48.211  INFO 7008 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9092 (http) with context path '/benchmark'
-2022-08-05 13:50:49.601  INFO 7008 --- [restartedMain] .b.AuditBenchmarkMicroserviceApplication : Started AuditBenchmarkMicroserviceApplication in 27.474 seconds (JVM running for 31.571)
-2022-08-05 14:33:45.749  INFO 7008 --- [RMI TCP Connection(61)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-08-05 14:33:47.056  INFO 7008 --- [RMI TCP Connection(61)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-05 14:33:47.092  INFO 7008 --- [RMI TCP Connection(61)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-05 14:33:47.514  WARN 7008 --- [RMI TCP Connection(61)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
-2022-08-05 14:33:47.525  INFO 7008 --- [RMI TCP Connection(61)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-05 14:33:47.542  INFO 7008 --- [RMI TCP Connection(61)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-05 14:57:34.526  INFO 3540 --- [restartedMain] .b.AuditBenchmarkMicroserviceApplication : Starting AuditBenchmarkMicroserviceApplication using Java 1.8.0_202 on DESKTOP-M1R7M81 with PID 3540 (F:\Audit Project\audit-management\Audit-Benchmark-microservice\target\classes started by USER in F:\Audit Project\audit-management\Audit-Benchmark-microservice)
-2022-08-05 14:57:34.551  INFO 3540 --- [restartedMain] .b.AuditBenchmarkMicroserviceApplication : No active profile set, falling back to 1 default profile: "default"
-2022-08-05 14:57:34.969  INFO 3540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-08-05 14:57:34.970  INFO 3540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-08-05 14:57:41.149  INFO 3540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-05 14:57:41.452  INFO 3540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 251 ms. Found 1 JPA repository interfaces.
-2022-08-05 14:57:42.577  INFO 3540 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=56d96617-7d58-3260-b747-f0b55728e51a
-2022-08-05 14:57:47.878  INFO 3540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9092 (http)
-2022-08-05 14:57:48.000  INFO 3540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-05 14:57:48.002  INFO 3540 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-08-05 14:57:49.896  INFO 3540 --- [restartedMain] o.a.c.c.C.[.[localhost].[/benchmark]     : Initializing Spring embedded WebApplicationContext
-2022-08-05 14:57:49.902  INFO 3540 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 14919 ms
-2022-08-05 14:57:51.921  INFO 3540 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-05 14:57:54.168  INFO 3540 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-05 14:57:54.253  INFO 3540 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:benchmark'
-2022-08-05 14:57:56.325  INFO 3540 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-05 14:57:56.686  INFO 3540 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-08-05 14:57:58.246  INFO 3540 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-05 14:57:59.317  INFO 3540 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-05 14:58:02.830  INFO 3540 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-05 14:58:02.887  INFO 3540 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-05 14:58:05.598  WARN 3540 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-05 14:58:08.326  WARN 3540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2022-08-05 14:58:09.279  INFO 3540 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/benchmark/manage'
-2022-08-05 14:58:09.701  INFO 3540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9092 (http) with context path '/benchmark'
-2022-08-05 14:58:10.540  INFO 3540 --- [restartedMain] .b.AuditBenchmarkMicroserviceApplication : Started AuditBenchmarkMicroserviceApplication in 45.808 seconds (JVM running for 72.441)
-2022-08-05 15:02:54.950  INFO 3540 --- [http-nio-9092-exec-1] o.a.c.c.C.[.[localhost].[/benchmark]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-05 15:18:24.340  INFO 3540 --- [RMI TCP Connection(29)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-08-05 15:18:25.614  INFO 3540 --- [RMI TCP Connection(29)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-05 15:18:25.633  INFO 3540 --- [RMI TCP Connection(29)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-05 15:18:26.022  WARN 3540 --- [RMI TCP Connection(29)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
-2022-08-05 15:18:26.036  INFO 3540 --- [RMI TCP Connection(29)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-05 15:18:26.055  INFO 3540 --- [RMI TCP Connection(29)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-05 15:18:47.106  INFO 7556 --- [restartedMain] .b.AuditBenchmarkMicroserviceApplication : Starting AuditBenchmarkMicroserviceApplication using Java 1.8.0_202 on DESKTOP-M1R7M81 with PID 7556 (F:\Audit Project\audit-management\Audit-Benchmark-microservice\target\classes started by USER in F:\Audit Project\audit-management\Audit-Benchmark-microservice)
-2022-08-05 15:18:47.162  INFO 7556 --- [restartedMain] .b.AuditBenchmarkMicroserviceApplication : No active profile set, falling back to 1 default profile: "default"
-2022-08-05 15:18:47.659  INFO 7556 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-08-05 15:18:47.661  INFO 7556 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-08 12:16:40.063  INFO 9184 --- [restartedMain] .b.AuditBenchmarkMicroserviceApplication : Starting AuditBenchmarkMicroserviceApplication using Java 1.8.0_202 on DESKTOP-M1R7M81 with PID 9184 (F:\Audit Project\audit-management\Audit-Benchmark-microservice\target\classes started by USER in F:\Audit Project\audit-management\Audit-Benchmark-microservice)
+2022-08-08 12:16:40.083  INFO 9184 --- [restartedMain] .b.AuditBenchmarkMicroserviceApplication : No active profile set, falling back to 1 default profile: "default"
+2022-08-08 12:16:40.366  INFO 9184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-08 12:16:40.369  INFO 9184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-08 12:16:48.145  INFO 9184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-08 12:16:48.432  INFO 9184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 242 ms. Found 1 JPA repository interfaces.
+2022-08-08 12:16:49.437  INFO 9184 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=56d96617-7d58-3260-b747-f0b55728e51a
+2022-08-08 12:16:53.043  INFO 9184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9092 (http)
+2022-08-08 12:16:53.100  INFO 9184 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-08 12:16:53.105  INFO 9184 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-08 12:16:53.864  INFO 9184 --- [restartedMain] o.a.c.c.C.[.[localhost].[/benchmark]     : Initializing Spring embedded WebApplicationContext
+2022-08-08 12:16:53.865  INFO 9184 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13493 ms
+2022-08-08 12:16:54.679  INFO 9184 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-08 12:16:56.208  INFO 9184 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-08 12:16:56.273  INFO 9184 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:benchmark'
+2022-08-08 12:16:57.310  INFO 9184 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-08 12:16:58.031  INFO 9184 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-08 12:16:58.954  INFO 9184 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-08 12:16:59.576  INFO 9184 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-08 12:17:02.482  INFO 9184 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-08 12:17:02.529  INFO 9184 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-08 12:17:05.028  WARN 9184 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-08 12:17:08.184  WARN 9184 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-08-08 12:17:09.186  INFO 9184 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/benchmark/manage'
+2022-08-08 12:17:09.636  INFO 9184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9092 (http) with context path '/benchmark'
+2022-08-08 12:17:10.534  INFO 9184 --- [restartedMain] .b.AuditBenchmarkMicroserviceApplication : Started AuditBenchmarkMicroserviceApplication in 34.099 seconds (JVM running for 38.802)
+2022-08-08 12:20:24.917  INFO 9184 --- [http-nio-9092-exec-1] o.a.c.c.C.[.[localhost].[/benchmark]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-08 12:56:46.817  INFO 9184 --- [RMI TCP Connection(56)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-08-08 12:56:48.245  INFO 9184 --- [RMI TCP Connection(56)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-08 12:56:48.279  INFO 9184 --- [RMI TCP Connection(56)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-08-08 12:56:48.666  WARN 9184 --- [RMI TCP Connection(56)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2022-08-08 12:56:48.677  INFO 9184 --- [RMI TCP Connection(56)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-08 12:56:48.697  INFO 9184 --- [RMI TCP Connection(56)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

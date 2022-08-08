@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: 20
+  pre_build:
+    commands:
+      - echo "Pre_build"
+      - echo "Logging in to Amazon ECR"
+      - $(aws ecr get-login  --no-include-email --region ap-south-1)
+  build:
+    commands:
+      - echo "Build"
+      - echo "Entered build phase"
+      - echo "Building Java"
+      - cd  Authentication-microservice
+      - mvn -DskipTests clean package
+      - docker build -t audit-auth-registry:latest .
+      - docker tag audit-auth-registry:latest 249113955330.dkr.ecr.ap-south-1.amazonaws.com/audit-auth-registry:latest
+
+  post_build:
+    commands:
+      - echo "Post_build"
+      - docker push 249113955330.dkr.ecr.ap-south-1.amazonaws.com/audit-auth-registry:latest
+      - printf '[{"name":"audit-auth-container","imageUri":"%s"}]' 249113955330.dkr.ecr.ap-south-1.amazonaws.com/audit-auth-registry > taskdefinition.json
+      - cat taskdefinition.json
+
+artifacts:
+  files:
+    - Authentication-microservice/taskdefinition.json
