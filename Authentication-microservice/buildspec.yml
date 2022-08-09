@@ -15,7 +15,8 @@ phases:
     commands:
       - echo "Build"
       - echo "Entered build phase"
-      - echo "Building Java"      
+      - echo "Building Java"     
+      - cd Authentication-microservice 
       - mvn clean install -DskipTests
       - docker build -t build -t audit-auth-registry .
       - docker tag audit-auth-registry:latest 249113955330.dkr.ecr.ap-south-1.amazonaws.com/audit-auth-registry:latest
@@ -28,7 +29,7 @@ phases:
 
 artifacts:
   files:
-    - imagedefinitions.json
+    - Authentication-microservice/imagedefinitions.json
   
 
 
