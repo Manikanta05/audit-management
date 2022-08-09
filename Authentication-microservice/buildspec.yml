@@ -3,32 +3,32 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto17
-      docker: 20
+      java: corretto8
+      
   pre_build:
     commands:
       - echo "Pre_build"
       - echo "Logging in to Amazon ECR"
       - $(aws ecr get-login --region ap-south-1 --no-include-email)
-      - REPOSITORY_URI=249113955330.dkr.ecr.ap-south-1.amazonaws.com/audit-auth-registry
-      - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
+      
   build:
     commands:
       - echo "Build"
       - echo "Entered build phase"
-      - echo "Building Java"
-      - cd  Authentication-microservice
-      - mvn clean package
-      - docker build -t aws-practice-check-manish .
-      - docker tag aws-practice-check-manish:latest $REPOSITORY_URI:$IMAGE_TAG
-
+      - echo "Building Java"      
+      - mvn clean install
+      - docker build -t build -t audit-auth-registry .
+      - docker tag audit-auth-registry:latest 249113955330.dkr.ecr.ap-south-1.amazonaws.com/audit-auth-registry:latest
   post_build:  
     commands:
       - echo "Post_build"
-      - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - printf '[{"name":"audit-auth-container","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - docker push 249113955330.dkr.ecr.ap-south-1.amazonaws.com/audit-auth-registry:latest
+      - printf '[{"name":"audit-auth-container","imageUri":"%s"}]' 249113955330.dkr.ecr.ap-south-1.amazonaws.com/audit-auth-registry:latest > imagedefinitions.json
       - cat imagedefinitions.json
 
 artifacts:
   files:
-    - Authentication-microservice/imagedefinitions.json
+    - imagedefinitions.json
+  
+
+
