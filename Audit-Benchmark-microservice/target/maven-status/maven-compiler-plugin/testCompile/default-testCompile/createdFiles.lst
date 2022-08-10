@@ -1,0 +1,4 @@
+com\cts\audit\benchmark\repository\BenchmarkRepositoryTest.class
+com\cts\audit\benchmark\AuditBenchmarkMicroserviceApplicationTests.class
+com\cts\audit\benchmark\controller\BenchmarkControllerTest.class
+com\cts\audit\benchmark\model\AuditBenchmarkTest.class
