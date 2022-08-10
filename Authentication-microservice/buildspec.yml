@@ -23,7 +23,7 @@ phases:
     commands:
       - echo "Post_build"
       - docker push 249113955330.dkr.ecr.ap-south-1.amazonaws.com/cde015-pod1-audit-auth-repository:latest
-      - printf '[{"name":"audit-auth-container","imageUri":"%s"}]' 249113955330.dkr.ecr.ap-south-1.amazonaws.com/audit-auth-registry:latest > imagedefinitions.json
+      - printf '[{"name":"audit-auth-container","imageUri":"%s"}]' 249113955330.dkr.ecr.ap-south-1.amazonaws.com/cde015-pod1-audit-auth-repository:latest > imagedefinitions.json
       - cat imagedefinitions.json
 
 artifacts:
