@@ -24,9 +24,7 @@ import com.cts.audit.checklist.pojo.AuditType;
 import com.cts.audit.checklist.repository.QuestionsRepository;
 import com.cts.audit.checklist.services.QuestionsServiceImpl;
 
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @ContextConfiguration
 @SpringBootTest
 public class CheckListControllerTest {
@@ -70,7 +68,7 @@ public class CheckListControllerTest {
 		when(questionsService.getQuestions("Internal")).thenReturn(questionsList);
 		responseEntity = auditCheckListController.getQuestions("token", "Internal");
 		assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-		log.info(responseEntity.getBody().toString());
+		//log.info(responseEntity.getBody().toString());
 		assertEquals("[How are you]", responseEntity.getBody().toString());
 
 	}
