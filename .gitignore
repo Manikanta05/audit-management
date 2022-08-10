@@ -10,3 +10,5 @@ logs/benchmark.txt*
 
 *.txt
 *.gz
+*.MF
+Audit-Benchmark-microservice/target/classes/META-INF/maven/com.cts.audit/Benchmark/pom.properties

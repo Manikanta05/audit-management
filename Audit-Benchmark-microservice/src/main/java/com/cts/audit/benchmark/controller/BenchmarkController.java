@@ -20,7 +20,11 @@ import com.cts.audit.benchmark.service.BenchmarkService;
 public class BenchmarkController {
 	@Autowired
 	private BenchmarkService auditService;
-	@GetMapping("/AuditBenchmark")
+	@GetMapping("/")
+	public String helloWorld() {
+		return "Welcome to Benchmark";
+	}
+	@GetMapping("/benchmark/AuditBenchmark")
 	public ResponseEntity<List<AuditBenchmark>> getBenchmarkMap(){
 		//List<AuditBenchmark> auditBenchmarkList = new ArrayList<AuditBenchmark>();
 		
