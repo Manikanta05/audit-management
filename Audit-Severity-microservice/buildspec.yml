@@ -1,0 +1,34 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:      
+      java: corretto17
+      
+  pre_build:
+    commands:
+      - echo "Pre_build"
+      - echo "Logging in to Amazon ECR"
+      - $(aws ecr get-login --region ap-south-1 --no-include-email)
+      
+  build:
+    commands:
+      - echo "Build"
+      - echo "Entered build phase"
+      - echo "Building Java"      
+      - mvn clean install -DskipTests
+      - docker build -t cde015-p1-audit-severity-repo .
+      - docker tag cde015-p1-audit-severity-repo:latest 249113955330.dkr.ecr.ap-south-1.amazonaws.com/cde015-p1-audit-severity-repo:latest
+  post_build:  
+    commands:
+      - echo "Post_build"
+      - docker push 249113955330.dkr.ecr.ap-south-1.amazonaws.com/cde015-p1-audit-severity-repo:latest
+      - printf '[{"name":"audit-severity-container","imageUri":"%s"}]' 249113955330.dkr.ecr.ap-south-1.amazonaws.com/cde015-p1-audit-severity-repo:latest > imagedefinitions.json
+      - cat imagedefinitions.json
+
+artifacts:
+  files:
+    - imagedefinitions.json
+  
+
+

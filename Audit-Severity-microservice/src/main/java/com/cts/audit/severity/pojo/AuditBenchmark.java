@@ -1,10 +1,5 @@
 package com.cts.audit.severity.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
-@AllArgsConstructor
 public class AuditBenchmark {
 	private int id;
 
@@ -34,6 +29,17 @@ public class AuditBenchmark {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public AuditBenchmark() {
+		super();
+	}
+
+	public AuditBenchmark(int id, String audittype, Integer accnoanswers) {
+		super();
+		this.id = id;
+		this.audittype = audittype;
+		this.accnoanswers = accnoanswers;
 	}
 
 }

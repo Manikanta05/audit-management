@@ -7,18 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
-
 @Entity
 @Table(name = "auditresponse")
 public class AuditResponseModel {
-	public AuditResponseModel(String executionstatus, String actionduration) {
-		super();
-		this.executionstatus = executionstatus;
-		this.actionduration = actionduration;
-	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,6 +37,16 @@ public class AuditResponseModel {
 	}
 
 	public void setActionduration(String actionduration) {
+		this.actionduration = actionduration;
+	}
+
+	public AuditResponseModel() {
+		super();
+	}
+
+	public AuditResponseModel(String executionstatus, String actionduration) {
+		super();
+		this.executionstatus = executionstatus;
 		this.actionduration = actionduration;
 	}
 

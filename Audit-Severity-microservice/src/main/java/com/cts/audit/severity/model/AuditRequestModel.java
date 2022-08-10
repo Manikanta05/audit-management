@@ -10,19 +10,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "auditrequest")
 public class AuditRequestModel {
-	@Override
-	public String toString() {
-		return "AuditRequestModel [requestid=" + requestid + ", auditdetail=" + auditdetail + ", projectname="
-				+ projectname + ", managername=" + managername + ", ownername=" + ownername + "]";
-	}
 
 	@Id
 	@Column(name = "RequestId")
@@ -71,6 +61,26 @@ public class AuditRequestModel {
 	}
 
 	public void setOwnername(String ownername) {
+		this.ownername = ownername;
+	}
+
+	@Override
+	public String toString() {
+		return "AuditRequestModel [requestid=" + requestid + ", auditdetail=" + auditdetail + ", projectname="
+				+ projectname + ", managername=" + managername + ", ownername=" + ownername + "]";
+	}
+
+	public AuditRequestModel() {
+		super();
+	}
+
+	public AuditRequestModel(int requestid, AuditDetailModel auditdetail, String projectname, String managername,
+			String ownername) {
+		super();
+		this.requestid = requestid;
+		this.auditdetail = auditdetail;
+		this.projectname = projectname;
+		this.managername = managername;
 		this.ownername = ownername;
 	}
 

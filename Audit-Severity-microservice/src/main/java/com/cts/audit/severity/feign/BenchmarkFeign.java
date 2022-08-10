@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.cts.audit.severity.pojo.AuditBenchmark;
 
-
-@FeignClient(name="benchmark-service",url="${BENCHMARK_SERVICE:http://localhost:9092/benchmark}")
+@FeignClient(name = "benchmark-service", url = "c15-audit-benchmark-lb-49476733.ap-south-1.elb.amazonaws.com/benchmark")
 public interface BenchmarkFeign {
 
 	@GetMapping("/AuditBenchmark")

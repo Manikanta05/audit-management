@@ -7,25 +7,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "auditdetail")
 public class AuditDetailModel {
-	@Override
-	public String toString() {
-		return "AuditDetailModel [auditid=" + auditid + ", audittype=" + audittype + ", auditdate=" + auditdate
-				+ ", countofno=" + countofno + "]";
-	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,12 +25,8 @@ public class AuditDetailModel {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "AuditDate")
 	private Date auditdate;
-	@Column(name="CountOfNo")
+	@Column(name = "CountOfNo")
 	private int countofno;
-	
-	
-//	@OneToOne(mappedBy = "auditdetail")
-//	private AuditRequestModel auditrequest;
 
 	public int getAuditid() {
 		return auditid;
@@ -69,6 +54,24 @@ public class AuditDetailModel {
 	}
 
 	public void setCountofno(int countofno) {
+		this.countofno = countofno;
+	}
+
+	@Override
+	public String toString() {
+		return "AuditDetailModel [auditid=" + auditid + ", audittype=" + audittype + ", auditdate=" + auditdate
+				+ ", countofno=" + countofno + "]";
+	}
+
+	public AuditDetailModel() {
+		super();
+	}
+
+	public AuditDetailModel(int auditid, String audittype, Date auditdate, int countofno) {
+		super();
+		this.auditid = auditid;
+		this.audittype = audittype;
+		this.auditdate = auditdate;
 		this.countofno = countofno;
 	}
 

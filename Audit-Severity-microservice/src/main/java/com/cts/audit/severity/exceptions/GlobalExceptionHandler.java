@@ -12,12 +12,13 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-	
+
 	@ExceptionHandler(TokenNotValidException.class)
-	public ResponseEntity<CustomErrorResponse> handleTokenExpiredEception(TokenNotValidException tokenNotValidException){
+	public ResponseEntity<CustomErrorResponse> handleTokenExpiredEception(
+			TokenNotValidException tokenNotValidException) {
 		CustomErrorResponse response = new CustomErrorResponse();
 		response.setDateTime(LocalDateTime.now());
 		response.setMessage(tokenNotValidException.getMessage());
-		return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
 	}
 }
