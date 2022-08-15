@@ -1,5 +1,7 @@
 package com.cts.auth.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +27,8 @@ import com.cts.auth.util.JwtUtil;
 @RequestMapping("/auth")
 @CrossOrigin(origins = "http://localhost:4200")
 public class AuthController {
-
+ 
+	final static Logger log = LoggerFactory.getLogger(AuthController.class);
 	@Autowired
 	private JwtUtil jwtUtil;
 
@@ -50,9 +53,9 @@ public class AuthController {
 	public ResponseEntity<Boolean> validate(@RequestHeader(name = "Authorization") String token1) {
 		String token = token1.substring(7);
 		try {
-//			log.info("inside validation................................");
+			log.info("inside validation................................");
 			UserDetails user = userDetailsService.loadUserByUsername(jwtUtil.extractUsername(token));
-//			log.info("after validation................................");
+			log.info("after validation................................");
 			
 			if (jwtUtil.validateToken(token, user)) {
 				System.out.println("=================Inside Validate==================");
@@ -76,12 +79,12 @@ public class AuthController {
 
 		if (userCredentials.getUserName() == null || userCredentials.getPassword() == null
 				|| userCredentials.getUserName().trim().isEmpty() || userCredentials.getPassword().trim().isEmpty()) {
-//			log.debug("Login unsuccessful --> User name or password is empty");
+			log.debug("Login unsuccessful --> User name or password is empty");
 			throw new UserNotFoundException("User name or password cannot be Null or Empty");
 		}
 
 		else if (jwtUtil.isNumeric(userCredentials.getUserName())) {
-//			log.debug("Login unsuccessful --> User name is numeric");
+			log.debug("Login unsuccessful --> User name is numeric");
 			throw new UserNameNumericException("User name is numeric");
 		}
 
@@ -90,14 +93,14 @@ public class AuthController {
 				UserDetails user = userDetailsService.loadUserByUsername(userCredentials.getUserName());
 				if (user.getPassword().equals(userCredentials.getPassword())) {
 					String token = jwtUtil.generateToken(user.getUsername());
-//					log.debug("Login successful");
+					log.debug("Login successful");
 					return token;
 				} else {
-//					log.debug("Login unsuccessful --> Invalid password");
+					log.debug("Login unsuccessful --> Invalid password");
 					throw new UserNotFoundException("Password is wrong");
 				}
 			} catch (Exception e) {
-//				log.debug("Login unsuccessful --> Invalid Credential");
+				log.debug("Login unsuccessful --> Invalid Credential");
 				throw new UserNotFoundException("Invalid Credential");
 			}
 		}
