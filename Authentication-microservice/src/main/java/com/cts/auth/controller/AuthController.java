@@ -23,7 +23,7 @@ import com.cts.auth.util.JwtUtil;
  */
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AuthController {
 
 	@Autowired
